@@ -15,3 +15,5 @@ Route::resource('/', 'AaryaTechcontroller');
 Route::get('aboutus', 'AaryaTechcontroller@aboutus');
 Route::get('companies', 'AaryaTechcontroller@companies');
 Route::get('contact', 'AaryaTechcontroller@contact');
+Route::resource('secureadmin', 'admincontroller');
+
