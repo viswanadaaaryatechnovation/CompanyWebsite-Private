@@ -15,5 +15,11 @@ Route::resource('/', 'AaryaTechcontroller');
 Route::get('aboutus', 'AaryaTechcontroller@aboutus');
 Route::get('companies', 'AaryaTechcontroller@companies');
 Route::get('contact', 'AaryaTechcontroller@contact');
+Route::post('secureadmin/login', 'admincontroller@login');
+Route::get('secureadmin/logout', 'admincontroller@logout');
+Route::resource('secureadmin/contactus', 'ContactUsController');
 Route::resource('secureadmin', 'admincontroller');
+
+
+
 

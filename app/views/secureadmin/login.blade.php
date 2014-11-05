@@ -17,22 +17,34 @@
 
     <body>
         <div class="container">
-            @if (Session::has('message'))
-                <div class="flash alert">
-                    <p>{{ Session::get('message') }}</p>
-                </div>
-            @endif
-            <div id="navbar" style="height:auto" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li>{{ HTML::link('secureadmin', 'Users', true)}}</li>
-            <li>{{ HTML::link('secureadmin/contactus', 'Contacts', true)}}</li>
-            <li>{{ HTML::link('secureadmin/logout', 'Logout', true)}}</li>
-            
-          </ul>
-        </div>
+         
 
-            @yield('main')
-        </div>
+<h1>Sign In</h1>
+
+{{ Form::open(array('url' => 'secureadmin/login')) }}
+    <ul>
+        <li>
+            {{ Form::label('username', 'Username:') }}
+            {{ Form::text('username') }}
+        </li>
+
+        <li>
+            {{ Form::label('password', 'Password:') }}
+            {{ Form::password('password') }}
+        </li>
+        <li>
+            {{ Form::submit('Submit', array('class' => 'btn')) }}
+        </li>
+    </ul>
+{{ Form::close() }}
+
+@if ($errors->any())
+    <ul>
+        {{ implode('', $errors->all('<li class="error">:message</li>')) }}
+    </ul>
+@endif
+
+</div>
 
     </body>
 

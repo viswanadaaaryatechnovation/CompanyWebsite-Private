@@ -47,14 +47,14 @@
 </div>
 
 <!--  Social Slider  -->
-  <ul class="get-social">
+  <!--<ul class="get-social">
     <li class="sc-ic-dim fb"><a href="javascript:;"></a></li>
     <li class="sc-ic-dim tw"><a href="javascript:;"></a></li>
     <li class="sc-ic-dim lkd"><a href="javascript:;"></a></li>
     <li class="sc-ic-dim g-plus"><a href="javascript:;"></a></li>
     <li class="sc-ic-dim pi"><a href="javascript:;"></a></li>
     <li class="sc-ic-dim play"><a href="javascript:;"></a></li>
-  </ul>
+  </ul> -->
 <!--// Social Slider  -->
 
 </section>

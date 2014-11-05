@@ -3,12 +3,12 @@
 
   <!--  Contact form -->
   <section id="abput-us" class="inner-page">
-    <section class="innerHeader clearfix relative">
+    <!--<section class="innerHeader clearfix relative">
       <div class="overlay"></div>
       <section class="container text-center relative">
         <h1 class="upCase">About Us</h1>
         <span>A</span> </section>
-    </section><!-- // Inner page  -->
+    </section>--><!-- // Inner page  -->
 
     <section class="container">
       

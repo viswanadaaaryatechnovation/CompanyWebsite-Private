@@ -2,14 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Company website | Home Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+  	<meta name="description" content="">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <title>Aarya Technovation - Home</title>
 
     <!-- Bootstrap -->
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/main-style.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sanchez:400,700" rel="stylesheet" />
+    <link href="{{asset('css/custom-styles.css')}}" rel="stylesheet" type="text/css" />
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,22 +27,23 @@
       <section class="container">
         <section class="row">
           <section class="col-sm-5">
-            <a class="navbar-brand" href="#"><span> AARIYA </span> Technovation</a>
+          	<a href="index.html"><img class="companyLogo" src="images/Aaryatech-logo.png" title="Aarya Technovation" alt="Aarya Technovation - Logo"/></a>
+            <a  href="index.html" class="navbar-brand"><span class="Logo-Name">AARYA</span> Technovation</a>
           </section><!-- // logo -->
           <section class="col-sm-7">
             <div class="up-nav text-right"> 
-              <a href="javascript:;" title="">careers</a>
-              <a href="javascript:;" title="">Offices</a>
-              <a href="javascript:;" title="">Login</a>                
+              <a href="javascript:;" title="" target="_blank">Careers</a>
+              <a href="javascript:;" title="" target="_blank">Offices</a>
+              <a href="javascript:;" title="" target="_blank">Login</a>                
             </div>  
-            <div class="">
+            <!--<div class="">
               <form role="form" class="navbar-form navbar-right">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="SEARCH AARIYA TECHNOVATION ">
+                  <input type="text" class="form-control" placeholder="SEARCH AARYA TECHNOVATION ">
                 </div>
                 <button class="btn btn-primary" type="submit">Sign in</button>
               </form>
-            </div>
+            </div>-->
           </section><!-- // logo -->
         </section>
       </section>
@@ -56,8 +61,8 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-    <li class="{{$index}}">{{ HTML::link('/', 'Home', true)}}</li>
-    <li class="{{$aboutus}}">{{ HTML::link('aboutus', 'AARIYA Technovation', true)}}</li>
+            <li class="{{$index}}">{{ HTML::link('/', 'Home', true)}}</li>
+    <li class="{{$aboutus}}">{{ HTML::link('aboutus', 'AARYA Technovation', true)}}</li>
 
     <li class="{{$companies}}">{{ HTML::link('companies', 'Companies', true)}}</li>
             
@@ -124,11 +129,11 @@
 <!-- lower Footer -->
 <div id="lower-footer">
   <div class="container">
-    <i class="copy">Copyright &copy; by Aariya Technovation</i>
+    <i class="copy">&copy; Copyright 2014 Aarya Technovation</i>
     <ul class="ex-links">
-      <li><a href="javascript:;">About</a></li>
-      <li><a href="javascript:;">Login</a></li>
-      <li class="m-right"><a href="javascript:;">Portfollio Company</a></li>
+      <li><a href="javascript:;">Terms</a></li>
+      <li><a href="javascript:;">Help</a></li>
+      <li class="m-right"><a href="javascript:;">Company Portfolio</a></li>
     </ul>
   </div>
 </div><!--// lower Footer -->

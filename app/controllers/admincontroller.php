@@ -9,8 +9,12 @@ class admincontroller extends \BaseController {
 	 */
 	public function index()
 	{
-		$users = User::paginate(4);
-        return View::make('secureadmin.index', array('users'=>$users));
+		if (Session::has('user_id')){
+			$users = User::paginate(4);
+        	return View::make('secureadmin.index', array('users'=>$users));
+		}else{
+			return View::make('secureadmin.login');
+		}
 	}
 
 
@@ -114,6 +118,27 @@ return Redirect::route('secureadmin.edit', $id)
         	return Redirect::route('secureadmin.index');
 		
 	}
-
+	public function login()
+	{
+			$input = Input::all();
+			$validation = Validator::make($input, User::$loginRules);
+			$user = User::whereRaw('username LIKE ? AND password LIKE ?',array($input['username'],$input['password']))->get();
+			if ($validation->passes() && count($user) > 0)
+        	{
+					Session::put('user_id', $user[0]['id']);
+					return Redirect::route('secureadmin.index');
+			}else{
+				return Redirect::route('secureadmin.index')
+            	->withInput()
+				->withErrors($validation)
+            	->with('message', 'There were validation errors.');
+			}
+			
+		
+	}
+	public function logout(){
+		Session::flush();
+		return Redirect::route('secureadmin.index');
+	}
 
 }

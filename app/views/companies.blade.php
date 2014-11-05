@@ -2,26 +2,29 @@
 @extends('layouts.aaryaTech')
 
   <section id="companies" class="inner-page">
-    <section class="innerHeader clearfix relative">
+    <!--<section class="innerHeader clearfix relative">
       <div class="overlay"></div>
       <section class="container text-center relative">
         <h1 class="upCase">Compaines</h1>
         <span>C</span> </section>
-    </section><!-- // Inner page  -->
+    </section>--><!-- // Inner page  -->
 
     <section class="container">
-      <section class="row">
+      <!--<section class="row">
         <section class="col-md-12">
         <div class="breadcrumbs">
-          <!-- Breadcrumb-->
+         
             <a class="home" href="index.html">AARIYA Technovation</a> &gt; Companies      </div>
         </section>
-      </section> 
+      </section>--> 
     <!-- //Breadcrumb  -->
 
     <section class="row">
       <section class="col-md-12">
         <h2>Companies</h2>
+        <section class="titlebtm">
+            <div></div>
+          </section>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
       </section>
     </section>
