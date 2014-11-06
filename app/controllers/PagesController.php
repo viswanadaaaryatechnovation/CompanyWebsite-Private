@@ -1,6 +1,6 @@
 <?php
 
-class contactUsController extends \BaseController {
+class PagesController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -10,8 +10,8 @@ class contactUsController extends \BaseController {
 	public function index()
 	{
 		if (Session::has('user_id')){
-			$contacts = ContactUs::paginate(4);
-         	return View::make('secureadmin.contactus.index', array('contacts'=>$contacts));
+			$pages = Pages::paginate(4);
+        	return View::make('secureadmin.pages.index', array('pages'=>$pages));
 		}else{
 			return View::make('secureadmin.login');
 		}
@@ -25,7 +25,7 @@ class contactUsController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('secureadmin.contactus.create');
+		return View::make('secureadmin.pages.create');
 	}
 
 
@@ -36,20 +36,20 @@ class contactUsController extends \BaseController {
 	 */
 	public function store()
 	{
-		
 		$input = Input::all();
 		$input['ip_address'] = Request::getClientIp();
-        	$validation = Validator::make($input, ContactUs::$rules);
+        	$validation = Validator::make($input, Pages::$rules);
         	if ($validation->passes())
         	{
-            	ContactUs::create($input);
-            	return Redirect::route('secureadmin.contactus.index');
+            	Pages::create($input);
+            	return Redirect::route('secureadmin.pages.index');
         	}
 
-        	return Redirect::route('secureadmin.contactus.create')
+        	return Redirect::route('secureadmin.pages.create')
             ->withInput()
             ->withErrors($validation)
             ->with('message', 'There were validation errors.');
+
 	}
 
 
@@ -73,13 +73,13 @@ class contactUsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		$contact = ContactUs::find($id);
-        	if (is_null($contact))
+			$page = Pages::find($id);
+        	if (is_null($page))
         	{
-            	return Redirect::route('secureadmin.contactus.index');
+            	return Redirect::route('secureadmin.pages.index');
         	}
-        	return View::make('secureadmin.contactus.edit', compact('contact'));
-    
+        	return View::make('secureadmin.pages.edit', compact('page'));
+		//
 	}
 
 
@@ -91,21 +91,22 @@ class contactUsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$input = Input::all();
+        $input = Input::all();
 		$input['ip_address'] = Request::getClientIp();
-        $validation = Validator::make($input, ContactUs::$rules);
+        $validation = Validator::make($input, Pages::$rules);
         if ($validation->passes())
         {
-            $user = ContactUs::find($id);
+            $user = Pages::find($id);
             $user->update($input);
-            return Redirect::route('secureadmin.contactus.index');
+            return Redirect::route('secureadmin.pages.index');
         }
-return Redirect::route('secureadmin.contactus.edit', $id)
+return Redirect::route('secureadmin.pages.edit', $id)
             ->withInput()
             ->withErrors($validation)
             ->with('message', 'There were validation errors.');
 		
 	}
+
 
 
 	/**
@@ -116,9 +117,10 @@ return Redirect::route('secureadmin.contactus.edit', $id)
 	 */
 	public function destroy($id)
 	{
+		Metafields::where('page_id','=',$id)->delete();
+		Pages::find($id)->delete();
+        return Redirect::route('secureadmin.pages.index');
 		
-		ContactUs::find($id)->delete();
-       	return Redirect::route('secureadmin.contactus.index');
 	}
 
 

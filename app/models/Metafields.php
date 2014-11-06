@@ -5,7 +5,7 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class ContactUs extends Eloquent implements UserInterface, RemindableInterface {
+class Metafields extends Eloquent implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
 
@@ -14,7 +14,7 @@ class ContactUs extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var string
 	 */
-	protected $table = 'contactus';
+	protected $table = 'metafields';
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -23,12 +23,18 @@ class ContactUs extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password', 'remember_token');
 protected $guarded = array('id');
-protected $fillable = array('name', 'email', 'message','ip_address');
+protected $fillable = array('page_id', 'name', 'content','ip_address');
 
   public static $rules = array(
-    'name' => 'required|min:5',
-    'email' => 'required|email',
-	'message' => 'required'
+  	'page_id'	=>	'required',
+    'name' => 'required|min:2',
+    'content' => 'required|min:2'
   );
+  
+  public function pages()
+  {
+    return $this->hasMany('Pages');
+  }
+  
 
 }

@@ -37,6 +37,7 @@ class admincontroller extends \BaseController {
 	public function store()
 	{
 		$input = Input::all();
+		$input['ip_address'] = Request::getClientIp();
         	$validation = Validator::make($input, User::$rules);
         	if ($validation->passes())
         	{
@@ -91,6 +92,7 @@ class admincontroller extends \BaseController {
 	public function update($id)
 	{
         $input = Input::all();
+		$input['ip_address'] = Request::getClientIp();
         $validation = Validator::make($input, User::$rules);
         if ($validation->passes())
         {

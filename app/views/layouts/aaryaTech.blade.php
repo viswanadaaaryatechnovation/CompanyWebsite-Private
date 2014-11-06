@@ -34,7 +34,8 @@
             <div class="up-nav text-right"> 
               <a href="javascript:;" title="" target="_blank">Careers</a>
               <a href="javascript:;" title="" target="_blank">Offices</a>
-              <a href="javascript:;" title="" target="_blank">Login</a>                
+              {{ HTML::link('secureadmin', 'Login', true)}}
+              <!--<a href="javascript:;" title="" target="_blank">Login</a>-->                
             </div>  
             <!--<div class="">
               <form role="form" class="navbar-form navbar-right">

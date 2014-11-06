@@ -17,7 +17,38 @@
           <div class="clear"></div>
           <div class="contact-form">
             <p>Comments or questions are welcome.</p>
-             <form method="POST" action="" name="support" id="support_form" role="form" novalidate="novalidate">
+            
+{{ Form::open(array('url' => 'store')) }}
+            <div class="form-group">
+            {{ Form::label('name', 'Name:') }}
+            {{ Form::text('name') }}
+        </div>
+
+     
+
+        <div class="form-group">
+            {{ Form::label('email', 'Email:') }}
+            {{ Form::text('email') }}
+        </div>
+
+        <div class="form-group">
+            {{ Form::label('message', 'Message:') }}
+            {{ Form::textarea('message') }}
+        </div>
+
+
+        <div class="form-group">
+            {{ Form::submit('Submit', array('class' => 'btn')) }}
+        </div>
+{{ Form::close() }}
+
+@if ($errors->any())
+    <ul>
+        {{ implode('', $errors->all('<li class="error">:message</li>')) }}
+    </ul>
+@endif
+
+             <!--<form method="POST" action="" name="support" id="support_form" role="form" novalidate="novalidate">
                 <div class="form-group">
                   <label for="Name">Name</label>
                   <input type="text" value="" name="Name" id="Name" class="form-control">
@@ -32,7 +63,7 @@
                   <textarea name="Message" id="Message" class="form-control" rows="5"></textarea>
                 </div>
                 <button class="btn btn-primary" type="submit">Submit</button>
-              </form>
+              </form>-->
           </div>
         </section><!-- Send a Message  -->
 
