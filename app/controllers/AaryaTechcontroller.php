@@ -1,7 +1,7 @@
 <?php
 
 class AaryaTechcontroller extends BaseController {
-	public $data = array('index'=>'', 'aboutus'=>'', 'companies'=>'', 'invester'=>'', 'contact'=>'');
+	public $data = array('index'=>'', 'aboutus'=>'', 'companies'=>'', 'invester'=>'', 'contact'=>'', );
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -10,6 +10,8 @@ class AaryaTechcontroller extends BaseController {
 	public function index()
 	{
 		$this->data['index'] = 'active';
+		$this->data['meta'] = Metafields::join('pages', 'pages.id', '=', 'metafields.page_id')->where('pages.name','=','Home')->get(array('metafields.name', 'metafields.content'))->toArray();
+		//print_r($this->data['meta']);exit;
 		return View::make('index', $this->data);
 
 	}
@@ -23,6 +25,7 @@ class AaryaTechcontroller extends BaseController {
 	public function aboutus()
 	{
 		$this->data['aboutus'] = 'active';
+		$this->data['meta'] = Metafields::join('pages', 'pages.id', '=', 'metafields.page_id')->where('pages.name','LIKE','AARYA Technovation')->get(array('metafields.name', 'metafields.content'))->toArray();
 		return View::make('aboutus', $this->data);
 
 	}
@@ -34,6 +37,7 @@ class AaryaTechcontroller extends BaseController {
 	public function companies()
 	{
 		$this->data['companies'] = 'active';
+		$this->data['meta'] = Metafields::join('pages', 'pages.id', '=', 'metafields.page_id')->where('pages.name','LIKE','Companies')->get(array('metafields.name', 'metafields.content'))->toArray();
 		return View::make('companies', $this->data);
 	}
 
@@ -46,6 +50,7 @@ class AaryaTechcontroller extends BaseController {
 	public function contact()
 	{
 		$this->data['contact'] = 'active';
+		$this->data['meta'] = Metafields::join('pages', 'pages.id', '=', 'metafields.page_id')->where('pages.name','LIKE','Contact Us')->get(array('metafields.name', 'metafields.content'))->toArray();
 		return View::make('contact', $this->data);
 	}
 	

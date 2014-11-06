@@ -1,6 +1,13 @@
-@section('main')
-@extends('layouts.aaryaTech')
 
+@extends('layouts.aaryaTech')
+@section('meta')
+	@if(count($meta) > 0)
+		@foreach ($meta as $m)
+    		<meta name="{{$m['name']}}" content="{{$m['content']}}" /> 
+  		@endforeach
+    @endif
+ @stop 
+@section('main')
   <section id="companies" class="inner-page">
     <!--<section class="innerHeader clearfix relative">
       <div class="overlay"></div>

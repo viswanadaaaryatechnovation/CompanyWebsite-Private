@@ -1,5 +1,5 @@
-@section('main')
 @extends('layouts.admin')
+@section('main')
 <h1>Admin Users</h1>
 
 <p>{{ link_to_route('secureadmin.create', 'Add new admin user') }}</p>

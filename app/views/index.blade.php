@@ -1,4 +1,11 @@
 @extends('layouts.aaryaTech')
+@section('meta')
+	@if(count($meta) > 0)
+		@foreach ($meta as $m)
+    		<meta name="{{$m['name']}}" content="{{$m['content']}}" /> 
+  		@endforeach
+    @endif
+ @stop   
 @section('main')
 <section id="slider-wrap" >
     <div class="container">
