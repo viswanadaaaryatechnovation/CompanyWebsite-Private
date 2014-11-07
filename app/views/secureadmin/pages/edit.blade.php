@@ -4,10 +4,21 @@
 {{ Form::model($page, array('method' => 'PATCH', 'route' =>
  array('secureadmin.pages.update', $page->id))) }}
     <ul>
-    	<li>
+    	    	<li>
+            {{ Form::label('menu', 'Menu:') }}
+            {{ Form::select('menu_id', $menulist) }}
+        </li>
+
+        <li>
             {{ Form::label('name', 'Name:') }}
             {{ Form::text('name') }}
         </li>
+        
+        <li>
+            {{ Form::label('url_name', 'URL Name:') }}
+            {{ Form::text('url_name') }}
+        </li>
+
         
         
         <li>

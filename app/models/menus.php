@@ -5,7 +5,7 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class Pages extends Eloquent implements UserInterface, RemindableInterface {
+class Menus extends Eloquent implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
 
@@ -14,7 +14,7 @@ class Pages extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var string
 	 */
-	protected $table = 'pages';
+	protected $table = 'menus';
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -22,13 +22,10 @@ class Pages extends Eloquent implements UserInterface, RemindableInterface {
 	 * @var array
 	 */
 	protected $guarded = array('id');
-	protected $fillable = array('name', 'menu_id', 'url_name','ip_address');
-	public static $rules = array(
-    'name' => 'required|min:2',
-	'url_name' => 'required|min:2',
-  );
-  	public function metafields()
-  {
-    return $this->hasMany('Metafields');
-  }
+	protected $fillable = array('name', 'ip_address');
+	public static $rules = array('name' => 'required|min:2');
+  	public function pages()
+  	{
+    	return $this->hasMany('Pages');
+  	}
 }

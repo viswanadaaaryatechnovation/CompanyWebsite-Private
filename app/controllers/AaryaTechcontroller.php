@@ -11,49 +11,63 @@ class AaryaTechcontroller extends BaseController {
 	{
 		$this->data['index'] = 'active';
 		$this->data['meta'] = Metafields::join('pages', 'pages.id', '=', 'metafields.page_id')->where('pages.name','=','Home')->get(array('metafields.name', 'metafields.content'))->toArray();
+		$this->data['menu'] = Pages::all();
 		//print_r($this->data['meta']);exit;
 		return View::make('index', $this->data);
 
 	}
 
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	 public function show($page = '')
+    {
+		
+		$data['active'] = $page;
+		$data['meta'] = Metafields::join('pages', 'pages.id', '=', 'metafields.page_id')->where('pages.name','=',$page)->get(array('metafields.name', 'metafields.content'))->toArray();
+		$data['menu'] = Pages::where('menu_id', '=', '1')->get();
+		$data['fmenu'] = $this->footerMenu();
+		//print_r($this->data['meta']);exit;
+		return View::make($page, $data);
+    }
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-	public function aboutus()
-	{
-		$this->data['aboutus'] = 'active';
-		$this->data['meta'] = Metafields::join('pages', 'pages.id', '=', 'metafields.page_id')->where('pages.name','LIKE','AARYA Technovation')->get(array('metafields.name', 'metafields.content'))->toArray();
-		return View::make('aboutus', $this->data);
-
-	}
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function companies()
-	{
-		$this->data['companies'] = 'active';
-		$this->data['meta'] = Metafields::join('pages', 'pages.id', '=', 'metafields.page_id')->where('pages.name','LIKE','Companies')->get(array('metafields.name', 'metafields.content'))->toArray();
-		return View::make('companies', $this->data);
-	}
-
-
-/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function contact()
-	{
-		$this->data['contact'] = 'active';
-		$this->data['meta'] = Metafields::join('pages', 'pages.id', '=', 'metafields.page_id')->where('pages.name','LIKE','Contact Us')->get(array('metafields.name', 'metafields.content'))->toArray();
-		return View::make('contact', $this->data);
-	}
 	
+	public function footerMenu(){
+		$fmenus = Pages::all();
+		foreach($fmenus as $fmenu){
+			switch($fmenu['menu_id']){
+				case 1:
+					$menu['main_menu'][] = $fmenu['name'];
+					break;
+				case 2 :
+					$menu['getKnowUs'][] = 	$fmenu['name'];	
+					break;
+				case 3:	
+					$menu['companies'][] = $fmenu['name'];
+					break;
+				case 4:
+					$menu['helpUs'][] = $fmenu['name'];
+					break;
+				case 5: 
+					$menu['inverstor'][] = $fmenu['name'];
+					break;	
+			}
+			
+		}
+		return $menu;
+		
+		
+	}
+
+
 	
 	/**
 	 * Store a newly created resource in storage.

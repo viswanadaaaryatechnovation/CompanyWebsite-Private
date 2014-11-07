@@ -62,14 +62,13 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="{{$index}}">{{ HTML::link('/', 'Home', true)}}</li>
-    <li class="{{$aboutus}}">{{ HTML::link('aboutus', 'AARYA Technovation', true)}}</li>
+          @if($menu->count() > 0)
+		@foreach ($menu as $page)
+    		<li class="{{$page->url_name ==$active ? 'active' : ''}}">{{ HTML::link($page->url_name, $page->name, true)}}</li> 
+  		@endforeach
+    @endif
+            
 
-    <li class="{{$companies}}">{{ HTML::link('companies', 'Companies', true)}}</li>
-            
- <li class="{{$invester}}">{{ HTML::link('companies', 'Investors', true)}}</li>
-            
- <li class="{{$contact}}">{{ HTML::link('contact', 'Contact Us', true)}}</li>
            
           </ul>
         </div><!--/.nav-collapse -->
@@ -87,38 +86,44 @@
       <div class="footer-col col-md-3">
         <h1>Get To Know Us</h1>
         <ul>
-          <li><a href="javascript:;">Careers</a></li>
-          <li><a href="javascript:;">Offices</a></li>
-          <li><a href="javascript:;">Companies</a></li>
-          <li><a href="javascript:;">Vision</a></li>
-          <li><a href="javascript:;">Team</a></li>
+        @if(isset($fmenu['getKnowUs']) && count($fmenu['getKnowUs']) > 0)
+        @foreach($fmenu['getKnowUs'] as $fm1)
+          <li><a href="javascript:;">{{$fm1}}</a></li>
+        @endforeach  
+        @endif
         </ul>
       </div><!-- //Get to Know Us -->
       <div class="footer-col col-md-3">
         <h1>Companies</h1>
         <ul>
-          <li><a href="javascript:;">Facebook</a></li>
-          <li><a href="javascript:;">Google</a></li>
-          <li><a href="javascript:;">Airbnb</a></li>
-          <li><a href="javascript:;">Pandora</a></li>
-          <li><a href="javascript:;">PureStorage</a></li>
+        @if(isset($fmenu['companies']) && count($fmenu['companies']) > 0)
+        @foreach($fmenu['companies'] as $fm2)
+          <li><a href="javascript:;">{{$fm2}}</a></li>
+        @endforeach  
+        @endif
+        </ul>
         </ul>
       </div><!-- //Companies -->
       <div class="footer-col col-md-3">
         <h1>Let Us Help You</h1>
         <ul>
-          <li><a href="javascript:;">Resources</a></li>
-          <li><a href="javascript:;">Blog</a></li>
-          <li><a href="javascript:;">News</a></li>
+        @if(isset($fmenu['helpUs']) && count($fmenu['helpUs']) > 0)
+        	@foreach($fmenu['helpUs'] as $fm3)
+          <li><a href="javascript:;">{{$fm3}}</a></li>
+        @endforeach  
+        @endif
+        </ul>
         </ul>
       </div>
       <div class="footer-col col-md-3">
         <h1>Investor</h1>
         <ul>
-          <li><a href="javascript:;">Rates</a></li>
-          <li><a href="javascript:;">Investment Opportunities</a></li>
-          <li><a href="javascript:;">Testimonials</a></li>
-          <li><a href="javascript:;">Raise Funding</a></li>
+        @if(isset($fmenu['inverstor']) && count($fmenu['inverstor']) > 0)
+        	@foreach($fmenu['inverstor'] as $fm4)
+          <li><a href="javascript:;">{{$fm4}}</a></li>
+        @endforeach  
+        @endif
+        </ul>
         </ul>
       </div>
     </div>

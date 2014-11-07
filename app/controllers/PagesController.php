@@ -11,6 +11,7 @@ class PagesController extends \BaseController {
 	{
 		if (Session::has('user_id')){
 			$pages = Pages::paginate(4);
+			$pages = Pages::join('menus', 'menus.id', '=', 'pages.menu_id')->paginate(4, array('pages.name', 'menus.name as menu_name', 'pages.id', 'pages.url_name'));
         	return View::make('secureadmin.pages.index', array('pages'=>$pages));
 		}else{
 			return View::make('secureadmin.login');
@@ -25,7 +26,12 @@ class PagesController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('secureadmin.pages.create');
+		$menus = Menus::get(array('id', 'name'))->toArray();
+		$menulist[''] = 'Select Page';
+		foreach($menus as $menu){
+			$menulist[$menu['id']] = $menu['name'];
+		}
+		return View::make('secureadmin.pages.create',compact('menulist'));
 	}
 
 
@@ -78,7 +84,12 @@ class PagesController extends \BaseController {
         	{
             	return Redirect::route('secureadmin.pages.index');
         	}
-        	return View::make('secureadmin.pages.edit', compact('page'));
+					$menus = Menus::get(array('id', 'name'))->toArray();
+					$menulist[''] = 'Select Page';
+					foreach($menus as $menu){
+						$menulist[$menu['id']] = $menu['name'];
+					}
+        	return View::make('secureadmin.pages.edit', compact('page','menulist'));
 		//
 	}
 
@@ -122,6 +133,6 @@ return Redirect::route('secureadmin.pages.edit', $id)
         return Redirect::route('secureadmin.pages.index');
 		
 	}
-
+	
 
 }

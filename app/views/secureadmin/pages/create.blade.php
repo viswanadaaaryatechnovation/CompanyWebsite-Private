@@ -4,10 +4,19 @@
 
 {{ Form::open(array('route' => 'secureadmin.pages.store')) }}
     <ul>
+    	<li>
+            {{ Form::label('menu', 'Menu:') }}
+            {{ Form::select('menu_id', $menulist) }}
+        </li>
 
         <li>
             {{ Form::label('name', 'Name:') }}
             {{ Form::text('name') }}
+        </li>
+        
+        <li>
+            {{ Form::label('url_name', 'URL Name:') }}
+            {{ Form::text('url_name') }}
         </li>
 
 
