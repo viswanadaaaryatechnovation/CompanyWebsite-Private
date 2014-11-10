@@ -12,7 +12,7 @@
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/main-style.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sanchez:400,700" rel="stylesheet" />
-    <link href="{{asset('css/custom-styles.css')}}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -27,16 +27,27 @@
       <section class="container">
         <section class="row">
           <section class="col-sm-5">
-          	<a href="index.html"><img class="companyLogo" src="images/Aaryatech-logo.png" title="Aarya Technovation" alt="Aarya Technovation - Logo"/></a>
-            <a  href="index.html" class="navbar-brand"><span class="Logo-Name">AARYA</span> Technovation</a>
+          <a  href="home" class="navbar-brand"><img class="companyLogo" src="images/Aarya TechnoVtion VC Coraldraw.png" width="245px" highet="59px" title="Aarya Technovation" alt="Aarya Technovation - Logo"/></a>
           </section><!-- // logo -->
           <section class="col-sm-7">
+             
             <div class="up-nav text-right"> 
-              <a href="javascript:;" title="" target="_blank">Careers</a>
+              <a href="careers.html" title="" target="_blank">Careers</a>
               <a href="javascript:;" title="" target="_blank">Offices</a>
-              {{ HTML::link('secureadmin', 'Login', true)}}
-              <!--<a href="javascript:;" title="" target="_blank">Login</a>-->                
+             {{ HTML::link('secureadmin', 'Login', true)}}                
+            </div>
+
+            <div class="social-wrap text-right">
+              <a href="javascript:;"><i class="fa fa-facebook"></i></a>
+              <a href="javascript:;"><i class="fa fa-google"></i></a>
+              <a href="javascript:;"><i class="fa fa-instagram"></i></a>
+              <a href="javascript:;"><i class="fa fa-linkedin"></i></a>
+              <a href="javascript:;"><i class="fa fa-pinterest"></i></a>
+              <a href="javascript:;"><i class="fa fa-tumblr"></i></a>
+              <a href="javascript:;"><i class="fa fa-twitter"></i></a>
+              <a href="javascript:;"><i class="fa fa-youtube"></i></a>
             </div>  
+            
             <!--<div class="">
               <form role="form" class="navbar-form navbar-right">
                 <div class="form-group">

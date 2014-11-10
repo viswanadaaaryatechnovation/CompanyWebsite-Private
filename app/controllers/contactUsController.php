@@ -10,7 +10,7 @@ class contactUsController extends \BaseController {
 	public function index()
 	{
 		if (Session::has('user_id')){
-			$contacts = ContactUs::paginate(4);
+			$contacts = ContactUs::paginate(PAGINATION_LIMIT);
          	return View::make('secureadmin.contactus.index', array('contacts'=>$contacts));
 		}else{
 			return View::make('secureadmin.login');

@@ -1,6 +1,6 @@
 <?php
 
-class PagesController extends \BaseController {
+class ScreenController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -10,8 +10,8 @@ class PagesController extends \BaseController {
 	public function index()
 	{
 		if (Session::has('user_id')){
-			$pages = Pages::join('menus', 'menus.id', '=', 'pages.menu_id')->paginate(PAGINATION_LIMIT, array('pages.name', 'menus.name as menu_name', 'pages.id', 'pages.url_name'));
-        	return View::make('secureadmin.pages.index', array('pages'=>$pages));
+			$contacts = Screens::paginate(PAGINATION_LIMIT);
+         	return View::make('secureadmin.screens.index', array('contacts'=>$contacts));
 		}else{
 			return View::make('secureadmin.login');
 		}
@@ -25,12 +25,7 @@ class PagesController extends \BaseController {
 	 */
 	public function create()
 	{
-		$menus = Menus::get(array('id', 'name'))->toArray();
-		$menulist[''] = 'Select Page';
-		foreach($menus as $menu){
-			$menulist[$menu['id']] = $menu['name'];
-		}
-		return View::make('secureadmin.pages.create',compact('menulist'));
+		return View::make('secureadmin.screens.create');
 	}
 
 
@@ -41,20 +36,27 @@ class PagesController extends \BaseController {
 	 */
 	public function store()
 	{
+		
 		$input = Input::all();
 		$input['ip_address'] = Request::getClientIp();
-        	$validation = Validator::make($input, Pages::$rules);
+        	$validation = Validator::make($input, Screens::$rules);
         	if ($validation->passes())
         	{
-            	Pages::create($input);
-            	return Redirect::route('secureadmin.pages.index');
+				//$file = Input::file('file');
+				$destinationPath = public_path().'/uploads/screens';
+				$input['screen_image'] = date('ymdhis').'_'.Input::file('screen_image')->getClientOriginalName();
+				$upload_success = Input::file('screen_image')->move($destinationPath, $input['screen_image']);
+				$input['screen_icon'] = date('ymdhis').'_'.Input::file('screen_icon')->getClientOriginalName();
+				$upload_success = date('ymdhis').'_'.Input::file('screen_icon')->move($destinationPath, $input['screen_icon']);
+				
+            	Screens::create($input);
+            	return Redirect::route('secureadmin.screens.index');
         	}
 
-        	return Redirect::route('secureadmin.pages.create')
+        	return Redirect::route('secureadmin.screens.create')
             ->withInput()
             ->withErrors($validation)
             ->with('message', 'There were validation errors.');
-
 	}
 
 
@@ -78,18 +80,13 @@ class PagesController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-			$page = Pages::find($id);
-        	if (is_null($page))
+		$screen = Screens::find($id);
+        	if (is_null($screen))
         	{
-            	return Redirect::route('secureadmin.pages.index');
+            	return Redirect::route('secureadmin.screens.index');
         	}
-					$menus = Menus::get(array('id', 'name'))->toArray();
-					$menulist[''] = 'Select Page';
-					foreach($menus as $menu){
-						$menulist[$menu['id']] = $menu['name'];
-					}
-        	return View::make('secureadmin.pages.edit', compact('page','menulist'));
-		//
+        	return View::make('secureadmin.screens.edit', compact('screen'));
+    
 	}
 
 
@@ -101,22 +98,21 @@ class PagesController extends \BaseController {
 	 */
 	public function update($id)
 	{
-        $input = Input::all();
+		$input = Input::all();
 		$input['ip_address'] = Request::getClientIp();
-        $validation = Validator::make($input, Pages::$rules);
+        $validation = Validator::make($input, Screens::$rules);
         if ($validation->passes())
         {
-            $user = Pages::find($id);
+            $user = Screens::find($id);
             $user->update($input);
-            return Redirect::route('secureadmin.pages.index');
+            return Redirect::route('secureadmin.screens.index');
         }
-return Redirect::route('secureadmin.pages.edit', $id)
+return Redirect::route('secureadmin.screens.edit', $id)
             ->withInput()
             ->withErrors($validation)
             ->with('message', 'There were validation errors.');
 		
 	}
-
 
 
 	/**
@@ -127,11 +123,10 @@ return Redirect::route('secureadmin.pages.edit', $id)
 	 */
 	public function destroy($id)
 	{
-		Metafields::where('page_id','=',$id)->delete();
-		Pages::find($id)->delete();
-        return Redirect::route('secureadmin.pages.index');
 		
+		Screens::find($id)->delete();
+       	return Redirect::route('secureadmin.screens.index');
 	}
-	
+
 
 }

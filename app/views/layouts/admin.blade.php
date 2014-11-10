@@ -22,6 +22,7 @@
             <li>{{ HTML::link('secureadmin/contactus', 'Contacts', true)}}</li>
             <li>{{ HTML::link('secureadmin/pages', 'Pages', true)}}</li>
             <li>{{ HTML::link('secureadmin/metafields', 'Meta Tags', true)}}</li>
+            <li>{{ HTML::link('secureadmin/screens', 'Screens', true)}}</li>
             <li>{{ HTML::link('secureadmin/logout', 'Logout', true)}}</li>
             
 </ul>

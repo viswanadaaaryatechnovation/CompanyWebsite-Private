@@ -1,20 +1,2 @@
 @charset "utf-8";
 /* CSS Document */
-.companyLogo{width:50px;height:50px;float:left;}
-.Logo-Name{font-family: "Sanchez",Arial,Helvetica,sans-serif;}
-.navbar-inverse .navbar-nav > li > a{border-right: 1px solid #2d2d2d;}
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus ,
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus{ border-right: 1px solid #e05d61;}
-.navbar{min-height:30px; }
-a.navbar-brand {color:#333;}
-.navbar-nav > li > a {padding-bottom: 10px;padding-top: 10px;}
-.navbar-collapse{padding-left:0;padding-right:0;}
-header .row{margin-top:5px;margin-bottom:5px;}
-.up-nav{margin:0;}
-.up-nav a{padding:0 10px; border-right:1px solid #CCC;}
-.up-nav a:hover{text-decoration:underline;}
-.up-nav a:last-child{padding-right:0;border:none;}
-.connect{margin-top:15px;} .connect i{margin-top:3px;}
-

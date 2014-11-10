@@ -7,47 +7,42 @@
     @endif
  @stop   
 @section('main')
-<section id="slider-wrap" >
+<section id="slider-wrap">
     <div class="container">
     <div id="custom_carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-            <div class="item active">
-                <div class="container-fluid">
-                    <img src="images/home_facebook.jpeg" class="img-responsive"/>
-                </div>            
+        	@foreach($screens as $screen) 
+            	<div class="item @if($i == 0) active @endif">
+                <img src="uploads/screens/{{$screen->screen_image}}" class="img-responsive"/>
+            </div> 
+            @if($i++) @endif
+            @endforeach
+            <!--<div class="item">
+                <img src="images/rating-tower.jpg" class="img-responsive"/>
             </div> 
             <div class="item">
-                <div class="container-fluid">
-                    <img src="images/home_airbnb.jpeg" class="img-responsive"/>
-                </div>            
-            </div> 
-            <div class="item">
-                <div class="container-fluid">
-                    <img src="images/home_facebook.jpeg" class="img-responsive"/>
-                </div>           
-            </div> 
-            <div class="item">
-                <div class="container-fluid">
-                    <img src="images/home_airbnb.jpeg" class="img-responsive"/>
-                </div>           
-            </div>
-            <div class="item">
-                <div class="container-fluid">
-                    <img src="images/home_facebook.jpeg" class="img-responsive"/>
-                </div>           
-            </div>
+                <img src="images/snap-a-ride.jpg" class="img-responsive"/>
+            </div>-->
         <!-- End Item -->
         </div>
         <!-- End Carousel Inner -->
         <div class="controls">
+
             <ul class="nav">
-              <li data-target="#custom_carousel" data-slide-to="0" class="active"><a href="#"><img src="images/facebook-logo.png"/></a></li>
-              <li data-target="#custom_carousel" data-slide-to="1"><a href="#"><img src="images/airbnb-logo.png"/></a></li>
-              <li data-target="#custom_carousel" data-slide-to="2"><a href="#"><img src="images/cloudera-logo.png"/></a></li>
-              <li data-target="#custom_carousel" data-slide-to="3"><a href="#"><img src="images/pandora-logo.png"/></a></li>
-              <li data-target="#custom_carousel" data-slide-to="4"><a href="#"><img src="images/pure-storage-logo.png"/></a></li>
+            @if($i=0) @endif
+            @foreach($screens as $screen)
+              <li data-target="#custom_carousel" data-slide-to="{{$i}}" class="active"><a href="#"><img src="uploads/screens/{{$screen->screen_icon}}"/></a></li>
+              @if($i++) @endif
+              @endforeach
+              <!--<li data-target="#custom_carousel" data-slide-to="1"><a href="#"><img src="images/rating-tower-logo.png"/></a></li>
+              <li data-target="#custom_carousel" data-slide-to="2"><a href="#"><img src="images/snap-a-ride-logo.png"/></a></li> -->
             </ul>
+
+            <div class="more-links">
+              <a href="javascript:;"> Pitch AN idea <i class="fa fa-angle-double-right"></i></a>
+              <a href="javascript:;"> More Companies <i class="fa fa-angle-double-right"></i></a>
+            </div>
         </div>
     </div>
     <!-- End Carousel -->
@@ -61,7 +56,7 @@
     <li class="sc-ic-dim g-plus"><a href="javascript:;"></a></li>
     <li class="sc-ic-dim pi"><a href="javascript:;"></a></li>
     <li class="sc-ic-dim play"><a href="javascript:;"></a></li>
-  </ul> -->
+  </ul>-->
 <!--// Social Slider  -->
 
 </section>
@@ -159,18 +154,18 @@
             <li class="col-md-4"> 
               <div class="entry-content clearfix">
                  <header class="entry-header">
-                    <h2 class="entry-title"><a rel="bookmark" href="javascript:;">It’s Not All Black and White</a></h2>
+                    <h2 class="entry-title"><a rel="bookmark" href="blog.html">It's Not All Black and White</a></h2>
                  </header>
                  <p>
                     Donec gravida ligula sapien. Aenean tristique imperdiet quam, eu tincidunt turpis pellentesque vel. Pellentesque
                  </p>
                  <div class="post-thumbnail">
-                    <a href="javascript:;"><img src="images/blog.jpg" class="grayscale img-responsive"></a>
+                    <a href="blog.html"><img src="images/blog.jpg" class="grayscale img-responsive"></a>
                  </div>
                  <!-- .entry-thumbnail -->
                  <div class="meta-divider"></div>
                  <div class="entry-date">
-                    <a title="View all posts by this date" href="javascript:;">November 02, 2014</a>
+                    <a title="View all posts by this date" href="blog.html">November 02, 2014</a>
                  </div>
                  <!-- .entry-date -->
                  <div class="entry-meta">
@@ -184,13 +179,13 @@
             <li class="col-md-4"> 
               <div class="entry-content clearfix">
                  <header class="entry-header">
-                    <h2 class="entry-title"><a rel="bookmark" href="javascript:;">It’s Not All Black and White</a></h2>
+                    <h2 class="entry-title"><a rel="bookmark" href="blog.html">It's Not All Black and White</a></h2>
                  </header>
                  <p>
                     Donec gravida ligula sapien. Aenean tristique imperdiet quam, eu tincidunt turpis pellentesque vel. Pellentesque 
                  </p>
                  <div class="post-thumbnail">
-                    <a href="javascript:;"><img src="images/blog.jpg" class="grayscale img-responsive"></a>
+                    <a href="blog.html"><img src="images/blog.jpg" class="grayscale img-responsive"></a>
                  </div>
                  <!-- .entry-thumbnail -->
                  <div class="meta-divider"></div>
@@ -209,13 +204,13 @@
             <li class="col-md-4"> 
               <div class="entry-content clearfix">
                  <header class="entry-header">
-                    <h2 class="entry-title"><a rel="bookmark" href="javascript:;">It’s Not All Its-Not-All-Black-and-White-750x500ck and White</a></h2>
+                    <h2 class="entry-title"><a rel="bookmark" href="javascript:;">It's Not All Its-Not-All-Black-and-White-750x500ck and White</a></h2>
                  </header>
                  <p>
                     Donec gravida ligula sapien. Aenean tristique imperdiet quam, eu tincidunt turpis pellentesque vel. Pellentesque 
                  </p>
                  <div class="post-thumbnail">
-                    <a href="javascript:;"><img src="images/blog.jpg" class="grayscale img-responsive"></a>
+                    <a href="blog.html"><img src="images/blog.jpg" class="grayscale img-responsive"></a>
                  </div>
                  <!-- .entry-thumbnail -->
                  <div class="meta-divider"></div>
@@ -252,4 +247,5 @@
        
     </div>
   </div><!--// How it Work pages  -->
+<!--// How it Work pages  -->
 @stop

@@ -1,35 +1,23 @@
 <?php
 
 class AaryaTechcontroller extends BaseController {
-	public $data = array('index'=>'', 'aboutus'=>'', 'companies'=>'', 'invester'=>'', 'contact'=>'', );
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		$this->data['index'] = 'active';
-		$this->data['meta'] = Metafields::join('pages', 'pages.id', '=', 'metafields.page_id')->where('pages.name','=','Home')->get(array('metafields.name', 'metafields.content'))->toArray();
-		$this->data['menu'] = Pages::all();
-		//print_r($this->data['meta']);exit;
-		return View::make('index', $this->data);
-
-	}
-
+	
 	/**
 	 * Display the specified resource.
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
-	 public function show($page = '')
+	 public function show($page = 'home')
     {
+		if($page == 'home')
+		$data['screens'] = Screens::all();	
 		
 		$data['active'] = $page;
 		$data['meta'] = Metafields::join('pages', 'pages.id', '=', 'metafields.page_id')->where('pages.name','=',$page)->get(array('metafields.name', 'metafields.content'))->toArray();
 		$data['menu'] = Pages::where('menu_id', '=', '1')->get();
 		$data['fmenu'] = $this->footerMenu();
+		$data['i'] = 0;
 		//print_r($this->data['meta']);exit;
 		return View::make($page, $data);
     }
