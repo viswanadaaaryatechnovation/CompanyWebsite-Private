@@ -27,18 +27,20 @@
       <section class="container">
         <section class="row">
           <section class="col-sm-5">
-          <a  href="home" class="navbar-brand"><img class="companyLogo" src="images/Aarya TechnoVtion VC Coraldraw.png" width="245px" highet="59px" title="Aarya Technovation" alt="Aarya Technovation - Logo"/></a>
+          <a  href="home" class="navbar-brand"><img class="companyLogo" src="{{asset('images/Aarya TechnoVtion VC Coraldraw.png')}}" width="245px" highet="59px" title="Aarya Technovation" alt="Aarya Technovation - Logo"/></a>
           </section><!-- // logo -->
           <section class="col-sm-7">
              
             <div class="up-nav text-right"> 
-              <a href="careers.html" title="" target="_blank">Careers</a>
-              <a href="javascript:;" title="" target="_blank">Offices</a>
-             {{ HTML::link('secureadmin', 'Login', true)}}                
+            {{ HTML::link('careers', 'Careers', true)}}
+            {{ HTML::link('contact', 'Contact Us', true)}}
+<!--              <a href="careers.html" title="" target="_blank">Careers</a>          <a href="javascript:;" title="" target="_blank">Offices</a>
+-->    
+             {{ HTML::link('secureadmin', 'Login', array('target' => '_blank'))}}                
             </div>
 
             <div class="social-wrap text-right">
-              <a href="javascript:;"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.facebook.com/pages/Aarya-Technovation/1493185997608278" target="_blank"><i class="fa fa-facebook"></i></a>
               <a href="javascript:;"><i class="fa fa-google"></i></a>
               <a href="javascript:;"><i class="fa fa-instagram"></i></a>
               <a href="javascript:;"><i class="fa fa-linkedin"></i></a>
@@ -95,32 +97,36 @@
     <div class="container">
     <div class="row">  
       <div class="footer-col col-md-3">
+        
+      </div>
+      <div class="footer-col col-md-3">
         <h1>Get To Know Us</h1>
         <ul>
         @if(isset($fmenu['getKnowUs']) && count($fmenu['getKnowUs']) > 0)
         @foreach($fmenu['getKnowUs'] as $fm1)
-          <li><a href="javascript:;">{{$fm1}}</a></li>
+          <li>{{ HTML::link($fm1['url_name'], $fm1['name'], true)}}</li>
         @endforeach  
         @endif
         </ul>
-      </div><!-- //Get to Know Us -->
-      <div class="footer-col col-md-3">
+      </div>
+      <!-- //Get to Know Us -->
+      <?php /*?><div class="footer-col col-md-3">
         <h1>Companies</h1>
         <ul>
         @if(isset($fmenu['companies']) && count($fmenu['companies']) > 0)
         @foreach($fmenu['companies'] as $fm2)
-          <li><a href="javascript:;">{{$fm2}}</a></li>
+          <li>{{ HTML::link($fm2['url_name'], $fm2['name'], true)}}</li>
         @endforeach  
         @endif
         </ul>
         </ul>
-      </div><!-- //Companies -->
+      </div><?php */?><!-- //Companies -->
       <div class="footer-col col-md-3">
         <h1>Let Us Help You</h1>
         <ul>
         @if(isset($fmenu['helpUs']) && count($fmenu['helpUs']) > 0)
         	@foreach($fmenu['helpUs'] as $fm3)
-          <li><a href="javascript:;">{{$fm3}}</a></li>
+          <li>{{ HTML::link($fm3['url_name'], $fm3['name'], true)}}</li>
         @endforeach  
         @endif
         </ul>
@@ -131,7 +137,7 @@
         <ul>
         @if(isset($fmenu['inverstor']) && count($fmenu['inverstor']) > 0)
         	@foreach($fmenu['inverstor'] as $fm4)
-          <li><a href="javascript:;">{{$fm4}}</a></li>
+          <li>{{ HTML::link($fm4['url_name'], $fm4['name'], true)}}</li>
         @endforeach  
         @endif
         </ul>
@@ -147,11 +153,24 @@
 <div id="lower-footer">
   <div class="container">
     <i class="copy">&copy; Copyright 2014 Aarya Technovation</i>
+    
     <ul class="ex-links">
-      <li><a href="javascript:;">Terms</a></li>
+      <?php /*?><li><a href="javascript:;">Terms</a></li>
       <li><a href="javascript:;">Help</a></li>
-      <li class="m-right"><a href="javascript:;">Company Portfolio</a></li>
+	  <li class="m-right"><a href="javascript:;">Company Portfolio</a></li><?php */?>
+      <li>{{ HTML::link('terms', 'Terms', true)}}</li>
+      <li>{{ HTML::link('companies', 'Company Portfolio', true)}}</li>
+      
     </ul>
+    <div class="connect">
+            <i class="cn-txt">Connect with us:</i>
+            <ul>
+              <li><a href="javascript:;"><img src="images/sm-fb.png"></a></li>
+              <li><a href="javascript:;"><img src="images/sm-tw.png"></a></li>
+              <li><a href="javascript:;"><img src="images/sm-gp.png"></a></li>
+              <li class="m-right"><a href="javascript:;"><img src="images/sm-pinterest.png"></a></li>
+            </ul>
+          </div>
   </div>
 </div><!--// lower Footer -->
 

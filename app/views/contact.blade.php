@@ -11,9 +11,52 @@
 
     <section class="container">
   <section id="contact-wrap">
-    <section class="map-wrap">
-      <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27437.65087325866!2d76.78014730946656!3d30.72665443510217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1414956715649" width="1024px" height="100%" frameborder="0" style="border:0"></iframe> 
-    </section><!-- // map Wrapper -->
+  	<h2 class="title-txt">Offices</h2>
+        <section class="titlebtm">
+          <div></div>
+        </section>
+        <div class="clear"></div>
+    <section class="row" id="off-address">
+        <div class="col-md-6">
+          <div class="row" >
+            <div class="col-sm-4">
+              <p>
+                  <strong> DieSachbearbeiter</strong> 
+                  Schönhauser Allee 167c<br>
+                  10435 Berlin ,Germany<br>
+                   +49 30 47373795<br>
+                  moin@emiladdress.de
+              </p>
+            </div>
+            <div class="col-sm-8">
+              <section class="map-wrap">
+                <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27437.65087325866!2d76.78014730946656!3d30.72665443510217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1414956715649" width="100%" height="100%" frameborder="0" style="border:0"></iframe> 
+              </section><!-- // map Wrapper -->
+            </div>
+          </div>
+        </div><!--   /Address One -->
+        <div class="col-md-6">
+          <div class="row" >
+            <div class="col-sm-4">
+              <p>
+                  <strong> DieSachbearbeiter</strong><br>
+                  Schönhauser Allee 167c<br>
+                  10435 Berlin<br>
+                  Germany<br>
+                  +49 30 47373795<br>
+                  moin@emiladdress.de
+              </p>
+            </div>
+            <div class="col-sm-8">
+              <section class="map-wrap">
+                <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27437.65087325866!2d76.78014730946656!3d30.72665443510217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1414956715649" width="100%" height="100%" frameborder="0" style="border:0"></iframe> 
+              </section><!-- // map Wrapper -->
+            </div>
+          </div>
+        </div><!-- Address Two -->
+
+
+      </section><!-- // map Wrapper -->
       <section class="row">
         <section class="col-sm-8">
           <h2 class="title-txt">Send a Message</h2>
@@ -94,15 +137,7 @@
               <address> 0424 756 781<br>
                 Fax: 1300 302 690 </address>
             </section>
-            <div class="connect">
-              <i class="cn-txt">Connect with us:</i>
-              <ul>
-                <li><a href="javascript:;"><img src="images/sm-fb.png"></a></li>
-                <li><a href="javascript:;"><img src="images/sm-tw.png"></a></li>
-                <li><a href="javascript:;"><img src="images/sm-gp.png"></a></li>
-                <li class="m-right"><a href="javascript:;"><img src="images/sm-pinterest.png"></a></li>
-              </ul>
-            </div>
+            
 
         </section>
       </section>

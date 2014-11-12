@@ -24,10 +24,12 @@ Route::resource('secureadmin/contactus', 'ContactUsController');
 Route::resource('secureadmin/pages', 'PagesController');
 Route::resource('secureadmin/metafields', 'MetaFieldsController');
 Route::resource('secureadmin/screens', 'ScreenController');
+Route::resource('secureadmin/posts', 'PostsController');
+Route::resource('secureadmin/resources', 'ResourcesController');
 Route::resource('secureadmin', 'AdminController');
 Route::get('/', array('as' => 'page.show', 'uses' => 'AaryaTechcontroller@show'));
 Route::get('/{page}', array('as' => 'page.show', 'uses' => 'AaryaTechcontroller@show'));
-
+Route::get('/{page}/{id}', array('as' => 'page.show', 'uses' => 'AaryaTechcontroller@show'));
 
 
 

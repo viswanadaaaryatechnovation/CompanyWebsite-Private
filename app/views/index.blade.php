@@ -234,16 +234,7 @@
           </ul>
           <div class="clear-20"></div>
            <a href="#" class="btn left view">View All</a>
-           <div class="connect">
-            <i class="cn-txt">Connect with us:</i>
-            <ul>
-              <li><a href="javascript:;"><img src="images/sm-fb.png"></a></li>
-              <li><a href="javascript:;"><img src="images/sm-tw.png"></a></li>
-              <li><a href="javascript:;"><img src="images/sm-gp.png"></a></li>
-              <li class="m-right"><a href="javascript:;"><img src="images/sm-pinterest.png"></a></li>
-            </ul>
-          </div>
-
+           
         </div>
       </div>
 

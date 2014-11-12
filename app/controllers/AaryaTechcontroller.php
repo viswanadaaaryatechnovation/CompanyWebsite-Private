@@ -8,10 +8,25 @@ class AaryaTechcontroller extends BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	 public function show($page = 'home')
+	 public function show($page = 'home',$id=0)
     {
-		if($page == 'home')
-		$data['screens'] = Screens::all();	
+		if($page == 'home'){
+			$data['screens'] = Screens::all();
+			$data['posts'] = Posts::orderBy('id', 'desc')->take(3)->get();
+			$data['resources'] = Resources::orderBy('id', 'desc')->take(3)->get();
+		}
+		if($page == 'blog' || $page == 'blog-inner')
+		$data['posts'] = Posts::orderBy('id', 'desc')->paginate(PAGINATION_LIMIT);
+		
+		if($page == 'resources' || $page == 'resources-inner')
+		$data['resources'] = Resources::orderBy('id', 'desc')->paginate(PAGINATION_LIMIT);
+		if($id != 0){
+			$data['id'] = $id;
+			if($page == 'blog-inner')
+				$data['post'] = Posts::where('id', '=',$id)->get(array('title','description','created_at'))->toArray();
+			if($page == 'resources-inner')
+				$data['resource'] = Resources::where('id', '=',$id)->get(array('title','description','created_at','video_url'))->toArray();
+		}
 		
 		$data['active'] = $page;
 		$data['meta'] = Metafields::join('pages', 'pages.id', '=', 'metafields.page_id')->where('pages.name','=',$page)->get(array('metafields.name', 'metafields.content'))->toArray();
@@ -30,26 +45,35 @@ class AaryaTechcontroller extends BaseController {
 	
 	public function footerMenu(){
 		$fmenus = Pages::all();
+		$i=0;
 		foreach($fmenus as $fmenu){
+			
 			switch($fmenu['menu_id']){
 				case 1:
-					$menu['main_menu'][] = $fmenu['name'];
+					$menu['main_menu'][$i]['name'] = $fmenu['name'];
+					$menu['main_menu'][$i]['url_name'] = $fmenu['url_name'];
 					break;
 				case 2 :
-					$menu['getKnowUs'][] = 	$fmenu['name'];	
+					$menu['getKnowUs'][$i]['name'] = 	$fmenu['name'];	
+					$menu['getKnowUs'][$i]['url_name'] = $fmenu['url_name'];
 					break;
 				case 3:	
-					$menu['companies'][] = $fmenu['name'];
+					$menu['companies'][$i]['name'] = $fmenu['name'];
+					$menu['companies'][$i]['url_name'] = $fmenu['url_name'];
 					break;
 				case 4:
-					$menu['helpUs'][] = $fmenu['name'];
+					$menu['helpUs'][$i]['name'] = $fmenu['name'];
+					$menu['helpUs'][$i]['url_name'] = $fmenu['url_name'];
 					break;
 				case 5: 
-					$menu['inverstor'][] = $fmenu['name'];
+					$menu['inverstor'][$i]['name'] = $fmenu['name'];
+					$menu['inverstor'][$i]['url_name'] = $fmenu['url_name'];
 					break;	
 			}
-			
+			$i++;
 		}
+		/*echo '<pre>';
+		print_r($menu);exit;*/
 		return $menu;
 		
 		
