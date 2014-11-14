@@ -28,7 +28,7 @@
 
       <section class="col-md-3">
 
-        <div class="right-head"> Join Our Business </div>
+        <div class="right-head"> Join Our Business Network </div>
         <div class="comp-logo">
           <span><img src="images/buy-n-use-logo-big.png" /></span>
           <span><img src="images/rating-tower-logo-big.png" /></span>

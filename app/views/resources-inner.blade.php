@@ -27,7 +27,7 @@
             </div>          
           </header>
           <div class="vid">
-              <iframe width="560" height="316" src="{{$resource[0]['video_url']}}" frameborder="0" allowfullscreen></iframe></div>
+              <iframe width="560" height="316" src="{{str_replace('/v/','/embed/',$resource[0]['video_url'])}}" frameborder="0" allowfullscreen></iframe></div>
           {{$resource[0]['description']}}
       </article> 
 

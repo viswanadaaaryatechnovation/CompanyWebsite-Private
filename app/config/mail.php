@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'mail.aaryatechnovation.com',
+	'host' => 'relay-hosting.secureserver.net',
 
 	/*
 	|--------------------------------------------------------------------------

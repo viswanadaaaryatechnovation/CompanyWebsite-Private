@@ -70,22 +70,25 @@
 
       <!-- Nav tabs -->
       <ul class="nav nav-tabs" role="tablist">
-        <li class="active"><a href="#how-it-work" role="tab" data-toggle="tab">Resources</a></li>
+      <li  class="active"><a href="#blog" role="tab" data-toggle="tab">Blog</a></li>
+      <li><a href="#how-it-work" role="tab" data-toggle="tab">Resources</a></li>
         <!--<li><a href="#customer-services" role="tab" data-toggle="tab">Customer Services</a></li>-->
-        <li><a href="#blog" role="tab" data-toggle="tab">Blog</a></li> 
+         
       </ul> 
 
       <!-- Tab panes -->
       <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="how-it-work">
+        <div role="tabpanel" class="tab-pane" id="how-it-work">
           <ul class="videos row">
           @foreach($resources as $resource)
             <li class="col-md-4">
               <div class="vid">
-              <iframe width="302" height="164" src="{{$resource->video_url}}" frameborder="0" allowfullscreen></iframe></div>
+              <a href="resources-inner/{{$resource->id}}">
+              <img width="302" height="164" src="http://img.youtube.com/vi/{{str_replace('https://www.youtube.com/v/','',$resource->video_url)}}/0.jpg"></a></div>
+              <!--<iframe width="302" height="164" src="{{$resource->video_url}}" frameborder="0" allowfullscreen></iframe>-->
               <div class="video-text">
                 <h1>{{$resource->title}}</h1>
-                <p>{{substr($resource->description,0,80)}}@if(strlen($resource->description)>80)...@endif</p>
+                <p>{{substr($resource->description,0,80)}}@if(strlen($resource->description)>80)...{{ HTML::link('resources-inner/'.$resource->id, 'See more', true)}}@endif</p>
               </div>
             </li>
             @endforeach
@@ -125,17 +128,18 @@
            
         
         </div>-->
-        <div role="tabpanel" class="tab-pane" id="blog">
+        <div role="tabpanel" class="tab-pane active" id="blog">
           <ul class="videos row">
           @foreach($posts as $post)
             <li class="col-md-4">
             @if($post->image != '')
               <div class="vid">
-              <img width="302" height="164" src="uploads/post/{{$post->image}}"></div>
+              <a href="blog-inner/{{$post->id}}">
+              <img width="302" height="164" src="uploads/post/{{$post->image}}"></a></div>
               @endif
               <div class="video-text">
                 <h1>{{$post->title}}</h1>
-                <p>{{substr($post->description,0,80)}}@if(strlen($post->description)>80)...@endif</p>
+                <p>{{substr($post->description,0,80)}}@if(strlen($post->description)>80)...{{ HTML::link('blog-inner/'.$post->id, 'See more', true)}}@endif</p>
               </div>
             </li>
             @endforeach

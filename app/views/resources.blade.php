@@ -17,7 +17,7 @@
       @foreach($resources as $resource)
       <article class="postWrap clearfix">
           <header class="entry-header">
-            <h2 class="entry-title"><a rel="bookmark" href="blog-inner.html">{{$resource->title}} </a></h2>
+            <h2 class="entry-title">{{ HTML::link('resources-inner/'.$resource->id, $resource->title, true)}}</h2>
 
             <div class="entry-meta">
               <!--<span class="byline">By <span class="author vcard"><a  href="#" class="url fn n">Admin</a></span></span>
@@ -32,9 +32,21 @@
             </div>          
           </header>
           <div class="vid">
+          <div class="image-left embed-video">
+
+<div class="videoWrapper">
+
+<iframe width="560" height="315" src="{{str_replace('/v/','/embed/',$resource->video_url)}}" 
+frameborder="0" allowfullscreen></iframe>
+
+</div>
+
+<p>{{$resource->description}}</p>
+
+</div></div><?php /*?>
               <iframe width="560" height="316" src="{{$resource->video_url}}" frameborder="0" allowfullscreen></iframe></div>
 {{$resource->description}}
-              <?php /*?><div class="more-link">
+              <div class="more-link">
                 {{ HTML::link('blog-inner/1', 'Continue reading', array('class'=>'btn-more'))}} </div></p><?php */?>
 
       </article>

@@ -17,7 +17,7 @@
       @foreach($posts as $post)
       <article class="postWrap clearfix">
           <header class="entry-header">
-            <h2 class="entry-title"><a rel="bookmark" href="blog-inner.html">{{$post->title}} </a></h2>
+            <h2 class="entry-title">{{ HTML::link('blog-inner/'.$post->id, $post->title, true)}}</h2>
 
             <div class="entry-meta">
               <!--<span class="byline">By <span class="author vcard"><a  href="#" class="url fn n">Admin</a></span></span>

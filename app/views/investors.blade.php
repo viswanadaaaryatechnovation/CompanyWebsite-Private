@@ -32,13 +32,14 @@
         <section class="titlebtm">
             <div></div>
           </section>
-        <p>For investors we provide great opportunity to invest in our diversified technology company
+        <p class="iner_con_rimage"><img src="http://aaryatechnovation.com/public/images/investors.jpg" alt="investors" title="investors" /> For investors we provide great opportunity to invest in our diversified technology company
 with innovative products. At the same time we understand the value of potential partners 
 and investors so that our vision can be turned into reality and we can grow rapidly from 
-a startup into sustainable market leadership. We are more than a bunch of passionate 
+a startup into sustainable market leadership.</p>
+<p> We are more than a bunch of passionate 
 founders as not only we will give you access to our detailed presentations of your products
 but we will walk you through the detailed analytics and market traction our products have 
-achieved.</p>
+achieved. </p>
 <p>We are looking for long term partners who can provide seasoned experience, resources,
 strategic advice, thoughtful guidance and unwavering support. We strongly believe that a
 good fostering partnership happens when both parties are genuinely committed towards a 

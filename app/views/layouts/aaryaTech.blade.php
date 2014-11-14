@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     @yield('meta')
      
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{{asset('images/favicon2.ico')}}" />
     <title>Aarya Technovation - Home</title>
 
     <!-- Bootstrap -->
@@ -28,7 +28,7 @@
       <section class="container">
         <section class="row">
           <section class="col-sm-5">
-          <a  href="home" class="navbar-brand"><img class="companyLogo" src="{{asset('images/Aarya TechnoVtion VC Coraldraw.png')}}" width="245px" highet="59px" title="Aarya Technovation" alt="Aarya Technovation - Logo"/></a>
+          <a  href="{{URL::to('home')}}" class="navbar-brand"><img class="companyLogo" src="{{asset('images/Aarya TechnoVtion VC Coraldraw.png')}}" width="245px" highet="59px" title="Aarya Technovation" alt="Aarya Technovation - Logo"/></a>
           </section><!-- // logo -->
           <section class="col-sm-7">
              

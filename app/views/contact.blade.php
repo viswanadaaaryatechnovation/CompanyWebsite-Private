@@ -87,7 +87,12 @@ Tel.(408)215-1234
             {{ Form::submit('Submit', array('class' => 'btn')) }}
         </div>
 {{ Form::close() }}
-
+@if (Session::has('message'))
+                <div class="flash alert">
+                    <p>{{ Session::get('message') }}</p>
+                </div>
+            @endif
+            
 @if ($errors->any())
     <ul>
         {{ implode('', $errors->all('<li class="error">:message</li>')) }}
@@ -120,7 +125,10 @@ Tel.(408)215-1234
           </section>
           <section class="add-wrap">
               <address>
-                <p style="text-align:left">Email us at: <a href="mailto:support@aaryatechnovation.com">support@aaryatechnovation.com</a></p> 
+                <p style="text-align:left">Human Resource<br /><a href="mailto:support@aaryatechnovation.com" style="color: #bd1117;">support@aaryatechnovation.com</a></p>
+                <p style="text-align:left">Social Media<br /><a href="mailto:online@aaryatechnovation.com" style="color: #bd1117;">online@aaryatechnovation.com</a></p>
+                <!--<p style="text-align:left">Contact Us<br /><a href="mailto:contact@aaryatechnovation.com" style="color: #bd1117;">Contact@aaryatechnovation.com</a></p>-->
+                <p style="text-align:left">Investors<br /><a href="mailto:ashvin@aaryatechnovation.com" style="color: #bd1117;">ashvin@aaryatechnovation.com</a></p> 
               </address>
               
 

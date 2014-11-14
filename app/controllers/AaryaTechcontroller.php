@@ -90,18 +90,23 @@ class AaryaTechController extends BaseController {
 	{
 		
 		$input = Input::all();
+		//print_r($input);exit;
 		$input['ip_address'] = Request::getClientIp();
 		//print_r($input);exit;
         	$validation = Validator::make($input, ContactUs::$rules);
         	if ($validation->passes())
         	{
-				
+				$data = array('name'=>$input['name'],'email'=>$input['email'], 'txt'=>$input['message']);
 Mail::send('emails.contact', array('content'=>'your contact details are sent to Aarya technovation'), function($msg) {
-   $msg->from('support@aaryatechnovation.com', 'Aarya Technovation');
+   $msg->from('contact@aaryatechnovation.com', 'Aarya Technovation');
    $msg->to(Input::get('email'), Input::get('name'))->subject('Aarya Technovation Contact');
 });
+Mail::send('emails.contactadmin', $data, function($msg) {
+   $msg->from(Input::get('email'), Input::get('name'));
+   $msg->to('contact@aaryatechnovation.com', 'Aarya Technovation')->subject('Aarya Technovation Contact');
+});
             	ContactUs::create($input);
-            	return Redirect::to('home');
+            	return Redirect::to('contact')->with('message','Thank You');
         	}
 
         	return Redirect::to('contact')
@@ -118,9 +123,16 @@ Mail::send('emails.contact', array('content'=>'your contact details are sent to 
 		{
 	//Input::merge(array('name'=>'visu')); 
 
-Mail::send('emails.subscribe', array('content'=>'You are subscribed with Aarya technovation successfully'), function($msg) {
-   $msg->from('support@aaryatechnovation.com', 'Aarya Technovation');
+Mail::send('emails.subscribe', array('content'=>'Thank you for subscribing to our newsletter service.'), function($msg) {
+   $msg->from('online@aaryatechnovation.com', 'Aarya Technovation');
    $msg->to(Input::get('email'), Input::get('email'))->subject('Aarya Technovation Subscription');
+});
+
+
+Mail::send('emails.subscribe', array('content'=>'Subscribe email:'.Input::get('email')), function($msg) {
+   $msg->to('online@aaryatechnovation.com', 'Aarya Technovation');
+   $msg->from(Input::get('email'), Input::get('email'));
+   $msg->subject('Aarya Technovation Subscription');
 });
 			Subscribers::create($input);
 			echo 'success';exit;
