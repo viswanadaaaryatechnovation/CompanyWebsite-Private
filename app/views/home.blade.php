@@ -85,7 +85,7 @@
               <iframe width="302" height="164" src="{{$resource->video_url}}" frameborder="0" allowfullscreen></iframe></div>
               <div class="video-text">
                 <h1>{{$resource->title}}</h1>
-                <p>{{$resource->description}}</p>
+                <p>{{substr($resource->description,0,80)}}@if(strlen($resource->description)>80)...@endif</p>
               </div>
             </li>
             @endforeach
@@ -126,6 +126,26 @@
         
         </div>-->
         <div role="tabpanel" class="tab-pane" id="blog">
+          <ul class="videos row">
+          @foreach($posts as $post)
+            <li class="col-md-4">
+            @if($post->image != '')
+              <div class="vid">
+              <img width="302" height="164" src="uploads/post/{{$post->image}}"></div>
+              @endif
+              <div class="video-text">
+                <h1>{{$post->title}}</h1>
+                <p>{{substr($post->description,0,80)}}@if(strlen($post->description)>80)...@endif</p>
+              </div>
+            </li>
+            @endforeach
+                      </ul>
+          <div class="clear-20"></div>
+          {{ HTML::link('blog', 'View All', array('class'=>'btn left view'))}}
+           <!--<a href="#" class="btn left view">View All</a>-->
+           
+        </div>
+        <?php /*?><div role="tabpanel" class="tab-pane" id="blog">
           <ul class="post-block row">
           @foreach($posts as $post)          
             <li class="col-md-4"> 
@@ -133,67 +153,22 @@
                  <header class="entry-header">
                     <h2 class="entry-title"><a rel="bookmark" href="blog">{{$post->title}}</a></h2>
                  </header>
-                 {{$post->description}}
+                 <p>{{substr($post->description,0,80)}}@if(strlen($post->description)>80)...@endif</p>
               </div> 
               
             </li>
             @endforeach
-           <?php /*?> <li class="col-md-4"> 
-              <div class="entry-content clearfix">
-                 <header class="entry-header">
-                    <h2 class="entry-title"><a rel="bookmark" href="blog.html">It's Not All Black and White</a></h2>
-                 </header>
-                 <p>
-                    Donec gravida ligula sapien. Aenean tristique imperdiet quam, eu tincidunt turpis pellentesque vel. Pellentesque 
-                 </p>
-                 <div class="post-thumbnail">
-                    <a href="blog.html"><img src="images/blog.jpg" class="grayscale img-responsive"></a>
-                 </div>
-                 <!-- .entry-thumbnail -->
-                 <div class="meta-divider"></div>
-                 <div class="entry-date">
-                    <a title="View all posts by this date" href="javascript:;">November 03, 2014</a>
-                 </div>
-                 <!-- .entry-date -->
-                 <div class="entry-meta">
-                    <span class="entry-author">
-                    By  <span class="author vcard"><a  href="javascript:;" class="url fn n">Serge Kij</a></span>     </span> <!-- .entry-author -->
-                    <span class="entry-category">in<a title="All posts from Formats" href="javascript:;">Formats</a></span>    
-                    <!-- .vlc-list -->
-                 </div>
-              </div> 
-            </li>
-            <li class="col-md-4"> 
-              <div class="entry-content clearfix">
-                 <header class="entry-header">
-                    <h2 class="entry-title"><a rel="bookmark" href="javascript:;">It's Not All Its-Not-All-Black-and-White-750x500ck and White</a></h2>
-                 </header>
-                 <p>
-                    Donec gravida ligula sapien. Aenean tristique imperdiet quam, eu tincidunt turpis pellentesque vel. Pellentesque 
-                 </p>
-                 <div class="post-thumbnail">
-                    <a href="blog.html"><img src="images/blog.jpg" class="grayscale img-responsive"></a>
-                 </div>
-                 <!-- .entry-thumbnail -->
-                 <div class="meta-divider"></div>
-                 <div class="entry-date">
-                    <a title="View all posts by this date" href="javascript:;">November 03, 2014</a>
-                 </div>
-                 <!-- .entry-date -->
-                 <div class="entry-meta">
-                    <span class="entry-author">
-                    By  <span class="author vcard"><a  href="javascript:;" class="url fn n">Serge Kij</a></span>     </span> <!-- .entry-author -->
-                    <span class="entry-category">in<a title="All posts from Formats" href="javascript:;">Formats</a></span>    
-                    <!-- .vlc-list -->
-                 </div>
-              </div> 
-            </li>
-  <?php */?>        </ul>
+                  </ul>
 		<div class="clear-20"></div>
            {{ HTML::link('blog', 'View All', array('class'=>'btn left view'))}}
-        </div>
+        </div><?php */?>
       </div>
-
+		<div class="subscribe">
+        <form method="post" onsubmit="return false" id="subscribers">
+        <input type="email" id="email" name="email"  style="display:inline; border: 1px solid #dcdcdc; height: 37px;width: 300px;vertical-align: middle;" />
+        <input type="submit" value=" Subscribe " onclick="sendsubsciber()" class="btn left view" />
+        </form>
+        </div>
 
  
        

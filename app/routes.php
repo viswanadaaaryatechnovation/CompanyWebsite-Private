@@ -17,7 +17,8 @@
 //Route::get('companies', 'AaryaTechcontroller@companies');
 //Route::get('contact', 'AaryaTechcontroller@contact');
 
-Route::post('store', 'AaryaTechcontroller@store');
+Route::post('store', 'AaryaTechController@store');
+Route::post('subsribe','AaryaTechController@subsribe');
 Route::post('secureadmin/login', 'AdminController@login');
 Route::get('secureadmin/logout', 'AdminController@logout');
 Route::resource('secureadmin/contactus', 'ContactUsController');
@@ -26,10 +27,11 @@ Route::resource('secureadmin/metafields', 'MetaFieldsController');
 Route::resource('secureadmin/screens', 'ScreenController');
 Route::resource('secureadmin/posts', 'PostsController');
 Route::resource('secureadmin/resources', 'ResourcesController');
+Route::resource('secureadmin/subscribers', 'SubscribersController');
 Route::resource('secureadmin', 'AdminController');
-Route::get('/', array('as' => 'page.show', 'uses' => 'AaryaTechcontroller@show'));
-Route::get('/{page}', array('as' => 'page.show', 'uses' => 'AaryaTechcontroller@show'));
-Route::get('/{page}/{id}', array('as' => 'page.show', 'uses' => 'AaryaTechcontroller@show'));
+Route::get('/', array('as' => 'page.show', 'uses' => 'AaryaTechController@show'));
+Route::get('/{page}', array('as' => 'page.show', 'uses' => 'AaryaTechController@show'));
+Route::get('/{page}/{id}', array('as' => 'page.show', 'uses' => 'AaryaTechController@show'));
 
 
 

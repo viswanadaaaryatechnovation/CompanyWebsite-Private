@@ -41,6 +41,11 @@ class PostsController extends \BaseController {
 		$validation = Validator::make($input, Posts::$rules);
 		if ($validation->passes())
 		{
+			$destinationPath = public_path().'/uploads/post';
+if($input['image'] != ''){
+			$input['image'] = date('ymdhis').'_'.Input::file('image')->getClientOriginalName();
+			$upload_success = Input::file('image')->move($destinationPath, $input['image']);	
+}
 			Posts::create($input);
 			return Redirect::route('secureadmin.posts.index');
 		}
@@ -96,6 +101,14 @@ class PostsController extends \BaseController {
         if ($validation->passes())
         {
             $post = Posts::find($id);
+//echo '<pre>';print_r($post->image);exit;
+			$destinationPath = public_path().'/uploads/post';
+if($input['image'] != ''){
+			$input['image'] = date('ymdhis').'_'.Input::file('image')->getClientOriginalName();
+			$upload_success = Input::file('image')->move($destinationPath, $input['image']);	
+}else{
+	$input['image'] = $post->image;
+}
             $post->update($input);
             return Redirect::route('secureadmin.posts.index');
         }

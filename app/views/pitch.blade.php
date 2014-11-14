@@ -11,32 +11,24 @@
   <section id="careers" class="inner-page">
    <section class="container">
       <section class="row">
-        <section class="col-md-12">
-        <div class="breadcrumbs">
-          <!-- Breadcrumb-->
-            <a class="home" href="index.html">AARIYA Technovation</a> &gt; Careers      </div>
-        </section>
-      </section> 
-    <!-- //Breadcrumb  -->
-
-    <section class="row">
-      <section class="col-md-9">
-        <h2>Work with the world's best entrepreneurs</h2>
+      <section class="col-md-9" style="padding-right:33px">
+        <h2>Pitch An Idea</h2>
           <section class="titlebtm">
             <div></div>
           </section>
-        <h3 class="sub-head">Shape Technology</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-
-        <h3 class="sub-head">Shape Technology</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-      </section>
+          
+          <p>
+       We welcome ideas that can transform the present business landscape. Ideas those can create New Needs, New Markets and even New Customer Segments.</p>
+       <ul style="margin-left:30px">
+        <li>Keep everything simple as we are not interested in complicated. Speak the Obvious. </li>
+        <li>We are not interested in competing products or present product iterations dominating the market landscape. We are looking for products that define consumers unmet needs. </li>  
+        <li>Talk to us how you came across the genius idea. What was the process like? And talk to us the problem you are solving. Do tell us the most exciting thing about your idea.</li>
+        </ul>
+        </section>
 
       <section class="col-md-3">
 
-        <div class="right-head"> Join Our Business </div>
+        <div class="right-head"> Join Our Business Network </div>
         <div class="comp-logo">
           <span><img src="images/buy-n-use-logo-big.png" /></span>
           <span><img src="images/rating-tower-logo-big.png" /></span>

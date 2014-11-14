@@ -2,13 +2,18 @@
 @extends('layouts.admin')
 <h1>Add Post</h1>
 <script type="text/javascript" src="{{asset('ckeditor/ckeditor.js')}}"></script>
-{{ Form::open(array('route' => 'secureadmin.posts.store')) }}
+{{ Form::open(array('route' => 'secureadmin.posts.store','files' => true)) }}
     <ul>
 
         <li>
             {{ Form::label('title', 'Title:') }}
             {{ Form::text('title') }}
         </li>
+        <li>
+            {{ Form::label('image', 'Blog Image:') }}
+            {{ Form::file('image') }}
+        </li>
+        
         
         <li>
             {{ Form::label('description', 'Description:') }}

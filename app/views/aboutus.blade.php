@@ -26,12 +26,19 @@
           <section class="titlebtm">
             <div></div>
           </section>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s </p>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,  when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,  </p>
-        </section>
+        <p> Aarya Technovation sole purpose is to give customers next generation of online products
+and to become world's most creative and customer centric Information Technology 
+Company. Our first product BuyNUse.com is to build a world class community based online 
+classifieds trading platform where customers can easily discover anything they want to buy, 
+sell or trade in a very safe, friendly and cost conscious manner. </p>
+
+<p>We are a team of tech entrepreneurs building disruptive consumer software products. We 
+invest in product and unique technologies that will define the future or where consumers will 
+eventually transition. </p>
+
+<p>World is full of repeats so we invest in products that define and give the right meaning to 
+NEW. Each of our product is unique. We firmly believe that technology is not only related to 
+machinery but a new and better way of doing things and serving our consumers.</p></section>
       </section>
      
     </section>

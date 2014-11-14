@@ -1,6 +1,6 @@
 <?php
 
-class AaryaTechcontroller extends BaseController {
+class AaryaTechController extends BaseController {
 	
 	/**
 	 * Display the specified resource.
@@ -23,13 +23,13 @@ class AaryaTechcontroller extends BaseController {
 		if($id != 0){
 			$data['id'] = $id;
 			if($page == 'blog-inner')
-				$data['post'] = Posts::where('id', '=',$id)->get(array('title','description','created_at'))->toArray();
+				$data['post'] = Posts::where('id', '=',$id)->get(array('title','description','created_at','image'))->toArray();
 			if($page == 'resources-inner')
 				$data['resource'] = Resources::where('id', '=',$id)->get(array('title','description','created_at','video_url'))->toArray();
 		}
 		
 		$data['active'] = $page;
-		$data['meta'] = Metafields::join('pages', 'pages.id', '=', 'metafields.page_id')->where('pages.name','=',$page)->get(array('metafields.name', 'metafields.content'))->toArray();
+		$data['meta'] = MetaFields::join('pages', 'pages.id', '=', 'metafields.page_id')->where('pages.name','=',$page)->get(array('metafields.name', 'metafields.content'))->toArray();
 		$data['menu'] = Pages::where('menu_id', '=', '1')->get();
 		$data['fmenu'] = $this->footerMenu();
 		$data['i'] = 0;
@@ -95,13 +95,37 @@ class AaryaTechcontroller extends BaseController {
         	$validation = Validator::make($input, ContactUs::$rules);
         	if ($validation->passes())
         	{
+				
+Mail::send('emails.contact', array('content'=>'your contact details are sent to Aarya technovation'), function($msg) {
+   $msg->from('support@aaryatechnovation.com', 'Aarya Technovation');
+   $msg->to(Input::get('email'), Input::get('name'))->subject('Aarya Technovation Contact');
+});
             	ContactUs::create($input);
-            	return Redirect::route('index');
+            	return Redirect::to('home');
         	}
 
         	return Redirect::to('contact')
             ->withInput()
             ->withErrors($validation)
             ->with('message', 'There were validation errors.');
+	}
+	public function subsribe()
+	{
+		$input = Input::all();
+		$input['ip_address'] = Request::getClientIp();
+		$validation = Validator::make($input, Subscribers::$rules);
+		if ($validation->passes())
+		{
+	//Input::merge(array('name'=>'visu')); 
+
+Mail::send('emails.subscribe', array('content'=>'You are subscribed with Aarya technovation successfully'), function($msg) {
+   $msg->from('support@aaryatechnovation.com', 'Aarya Technovation');
+   $msg->to(Input::get('email'), Input::get('email'))->subject('Aarya Technovation Subscription');
+});
+			Subscribers::create($input);
+			echo 'success';exit;
+			//return Redirect::route('secureadmin.subscribers.index');
+		}
+			echo 'Fail';
 	}
 }

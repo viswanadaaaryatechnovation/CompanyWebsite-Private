@@ -13,6 +13,7 @@
     <link href="{{asset('css/main-style.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sanchez:400,700" rel="stylesheet" />
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <script src="js/aarya.js"></script>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -36,16 +37,16 @@
             {{ HTML::link('contact', 'Contact Us', true)}}
 <!--              <a href="careers.html" title="" target="_blank">Careers</a>          <a href="javascript:;" title="" target="_blank">Offices</a>
 -->    
-             {{ HTML::link('secureadmin', 'Login', array('target' => '_blank'))}}                
+             {{ HTML::link('login', 'Login', true)}}                
             </div>
 
             <div class="social-wrap text-right">
               <a href="https://www.facebook.com/pages/Aarya-Technovation/1493185997608278" target="_blank"><i class="fa fa-facebook"></i></a>
               <a href="javascript:;"><i class="fa fa-google"></i></a>
-              <a href="javascript:;"><i class="fa fa-instagram"></i></a>
+           <!--   <a href="javascript:;"><i class="fa fa-instagram"></i></a>-->
               <a href="javascript:;"><i class="fa fa-linkedin"></i></a>
               <a href="javascript:;"><i class="fa fa-pinterest"></i></a>
-              <a href="javascript:;"><i class="fa fa-tumblr"></i></a>
+              <!--<a href="javascript:;"><i class="fa fa-tumblr"></i></a>-->
               <a href="javascript:;"><i class="fa fa-twitter"></i></a>
               <a href="javascript:;"><i class="fa fa-youtube"></i></a>
             </div>  
@@ -110,6 +111,18 @@
         </ul>
       </div>
       <!-- //Get to Know Us -->
+      
+      <div class="footer-col col-md-3">
+        <h1>Partners With Us</h1>
+        <ul>
+        @if(isset($fmenu['inverstor']) && count($fmenu['inverstor']) > 0)
+        	@foreach($fmenu['inverstor'] as $fm4)
+          <li>{{ HTML::link($fm4['url_name'], $fm4['name'], true)}}</li>
+        @endforeach  
+        @endif
+        </ul>
+        </ul>
+      </div>
       <?php /*?><div class="footer-col col-md-3">
         <h1>Companies</h1>
         <ul>
@@ -127,17 +140,6 @@
         @if(isset($fmenu['helpUs']) && count($fmenu['helpUs']) > 0)
         	@foreach($fmenu['helpUs'] as $fm3)
           <li>{{ HTML::link($fm3['url_name'], $fm3['name'], true)}}</li>
-        @endforeach  
-        @endif
-        </ul>
-        </ul>
-      </div>
-      <div class="footer-col col-md-3">
-        <h1>Investor</h1>
-        <ul>
-        @if(isset($fmenu['inverstor']) && count($fmenu['inverstor']) > 0)
-        	@foreach($fmenu['inverstor'] as $fm4)
-          <li>{{ HTML::link($fm4['url_name'], $fm4['name'], true)}}</li>
         @endforeach  
         @endif
         </ul>

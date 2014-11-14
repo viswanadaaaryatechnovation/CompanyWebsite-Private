@@ -31,6 +31,10 @@
               </span>
             </div>          
           </header>
+          @if($post->image != '')
+              <div class="vid">
+              <img width="560" height="316" src="uploads/post/{{$post->image}}"></div>
+              @endif
 {{$post->description}}
               <?php /*?><div class="more-link">
                 {{ HTML::link('blog-inner/1', 'Continue reading', array('class'=>'btn-more'))}} </div></p><?php */?>

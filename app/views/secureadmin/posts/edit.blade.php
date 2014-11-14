@@ -3,13 +3,18 @@
 <script type="text/javascript" src="{{asset('ckeditor/ckeditor.js')}}"></script>
 <h1>Edit Post</h1>
 {{ Form::model($post, array('method' => 'PATCH', 'route' =>
- array('secureadmin.posts.update', $post->id))) }}
+ array('secureadmin.posts.update', $post->id),'files' => true)) }}
     <ul>
     	    
         <li>
             {{ Form::label('title', 'Title:') }}
             {{ Form::text('title') }}
         </li>
+        <li>
+            {{ Form::label('image', 'Blog Image:') }}
+            {{ Form::file('image') }}
+        </li>
+        
         
         <li>
             {{ Form::label('description', 'Description:') }}

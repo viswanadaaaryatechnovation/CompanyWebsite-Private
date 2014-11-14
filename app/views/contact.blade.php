@@ -19,37 +19,34 @@
     <section class="row" id="off-address">
         <div class="col-md-6">
           <div class="row" >
+          <p style="padding-left: 15px;"><strong>Aarya Technovation India Pvt. Ltd.</strong></p>
             <div class="col-sm-4">
               <p>
-                  <strong> DieSachbearbeiter</strong> 
-                  Schönhauser Allee 167c<br>
-                  10435 Berlin ,Germany<br>
-                   +49 30 47373795<br>
-                  moin@emiladdress.de
-              </p>
+                   3rd Floor, Plot No. 63, Jubilee Hills, <br />
+                   Hyderabad 500034</br>
+
+Tel. 7674942123</p>
             </div>
             <div class="col-sm-8">
               <section class="map-wrap">
-                <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27437.65087325866!2d76.78014730946656!3d30.72665443510217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1414956715649" width="100%" height="100%" frameborder="0" style="border:0"></iframe> 
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3806.38745294277!2d78.39785499999999!3d17.441159999999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1415789012317" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
               </section><!-- // map Wrapper -->
             </div>
           </div>
         </div><!--   /Address One -->
         <div class="col-md-6">
           <div class="row" >
+          <p style="padding-left: 15px;"><strong>Aarya Technovation Inc.</strong></p>
             <div class="col-sm-4">
-              <p>
-                  <strong> DieSachbearbeiter</strong><br>
-                  Schönhauser Allee 167c<br>
-                  10435 Berlin<br>
-                  Germany<br>
-                  +49 30 47373795<br>
-                  moin@emiladdress.de
+              <p align="left">
+                   425 Broadway Street,<br /> Redwood City,<br /> CA 94063 <br />
+
+Tel.(408)215-1234
               </p>
             </div>
             <div class="col-sm-8">
               <section class="map-wrap">
-                <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27437.65087325866!2d76.78014730946656!3d30.72665443510217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1414956715649" width="100%" height="100%" frameborder="0" style="border:0"></iframe> 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3165.973627841714!2d-122.20321550000004!3d37.4849487!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1415789478274" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
               </section><!-- // map Wrapper -->
             </div>
           </div>
@@ -123,19 +120,10 @@
           </section>
           <section class="add-wrap">
               <address>
-                <p>Email us at <a href="mailto:bobby@clickkidz.com">bobby@clickkidz.com</a>.</p> 
+                <p style="text-align:left">Email us at: <a href="mailto:support@aaryatechnovation.com">support@aaryatechnovation.com</a></p> 
               </address>
-              <address>
-                <strong>Enquiries </strong><br>
-                <a href="mailto:bobby@clickkidz.com">Email us at bobby@clickkidz.com</a>
-              </address>
+              
 
-              <address>
-                <strong>Locations </strong><br>
-                110 Elizabeth Street,<br> Croydon, 2132, Australia.
-              </address>
-              <address> 0424 756 781<br>
-                Fax: 1300 302 690 </address>
             </section>
             
 

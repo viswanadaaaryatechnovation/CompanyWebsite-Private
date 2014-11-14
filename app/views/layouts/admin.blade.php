@@ -23,8 +23,9 @@
             <li>{{ HTML::link('secureadmin/pages', 'Pages', true)}}</li>
             <li>{{ HTML::link('secureadmin/metafields', 'Meta Tags', true)}}</li>
             <li>{{ HTML::link('secureadmin/screens', 'Screens', true)}}</li>
-            <li>{{ HTML::link('secureadmin/posts', 'Posts', true)}}</li>
+            <li>{{ HTML::link('secureadmin/posts', 'Blog', true)}}</li>
             <li>{{ HTML::link('secureadmin/resources', 'Resources', true)}}</li>
+            <li>{{ HTML::link('secureadmin/subscribers', 'subscribers', true)}}</li>
             <li>{{ HTML::link('secureadmin/logout', 'Logout', true)}}</li>
             
 </ul>

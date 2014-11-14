@@ -26,6 +26,11 @@
               
             </div>          
           </header>
+          
+          @if($post[0]['image'] != '')
+              <div class="vid">
+              <img width="560" height="316" src="{{asset('uploads/post/'.$post[0]['image'])}}"></div>
+              @endif
           {{$post[0]['description']}}
       </article> 
 

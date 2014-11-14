@@ -11,28 +11,20 @@
   <section id="careers" class="inner-page">
    <section class="container">
       <section class="row">
-        <section class="col-md-12">
-        <div class="breadcrumbs">
-          <!-- Breadcrumb-->
-            <a class="home" href="index.html">AARIYA Technovation</a> &gt; Careers      </div>
-        </section>
-      </section> 
-    <!-- //Breadcrumb  -->
-
-    <section class="row">
       <section class="col-md-9">
-        <h2>Work with the world's best entrepreneurs</h2>
+        <h2>Careers</h2>
           <section class="titlebtm">
             <div></div>
           </section>
-        <h3 class="sub-head">Shape Technology</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+        <p>We love what we do. We are not only looking for talented people but we are looking for people who want accomplish something great through technology and innovation. Please submit your profile if you want to join a team of entrepreneurs, web designers, developers, digital marketing geniuses.</p>
+        <p>We will look at your specific skill set and give you the responsibility of an exceptional project that best fits your skill set. Be a part of an exceptional start up project and see how the next big thing is materialized and taken to the consumers. </p>
 
-        <h3 class="sub-head">Shape Technology</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-      </section>
+<p>We deeply believe that long term relationships are build on honesty, trust and respect. You should be very free to express your views in a constructive manner no matter how different you think. </p>
+
+<p>It doesn't matter if you are a software designer, developer, marketing head or a business analyst. We want everyone to be entrepreneur first so apart from your skill set you need to be an entrepreneur first.</p>
+
+<p>We say big NO to any kind of politics as we believe in a very open and frank culture. We value teamwork a lot.</p>
+        </section>
 
       <section class="col-md-3">
 

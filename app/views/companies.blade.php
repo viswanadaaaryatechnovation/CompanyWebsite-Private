@@ -28,58 +28,49 @@
 
     <section class="row">
       <section class="col-md-12">
-        <h2>Companies</h2>
+        <h2>Our Business</h2>
         <section class="titlebtm">
             <div></div>
           </section>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+        <p>We invest in software products that can scale to great heights. Some of our businesses include Buy N Use, Snap A Ride, Rating Tower, 99 Luxuries, Good By Choice.</p>
       </section>
     </section>
    <section class="row">
       <section class="col-md-12">
-        <h2> Our Partners </h2>
-        <section class="titlebtm">
-          <div></div>
-        </section>
+        
         <section class="row companies-wrap">
           <section class="col-md-3 col-sm-4">
             <a class="our-clients" href="#">
-              <img  src="images/airbnb-logo.png">
+              <img  src="images/buy-n-use-logo.png">
             </a>
           </section>
 
           <section class="col-md-9 col-sm-8">
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
+            <p>Buynuse – Buy N Use is a world class community based online classifieds trading platform
+where customers can easily discover anything they want to buy, sell or trade in a very safe, 
+friendly and cost conscious manner.</p>
           </section>
         </section><!--  Companies  -->
         <section class="row companies-wrap">
           <section class="col-md-3 col-sm-4">
             <a class="our-clients" href="#">
-              <img  src="images/cloudera-logo.png">
+              <img  src="images/snap-a-ride-logo.png">
             </a>
           </section> 
           <section class="col-md-9 col-sm-8">
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
+            <p>Snap a ride – You can wait, make a call or even whistle to call a cab. But why go through all 
+this if you can have a reliable service just at a touch of your finger tip. A new, smart, safe 
+and cost conscious way to travel within and outside the city.</p>
           </section>
         </section><!--  Companies  -->
         <section class="row companies-wrap">
           <section class="col-md-3 col-sm-4">
             <a class="our-clients" href="#">
-              <img  src="images/airbnb-logo.png">
+              <img  src="images/rating-tower-logo.png">
             </a>
           </section> 
           <section class="col-md-9 col-sm-8">
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
-          </section>
-        </section><!--  Companies  -->
-        <section class="row companies-wrap">
-          <section class="col-md-3 col-sm-4">
-            <a class="our-clients" href="#">
-              <img  src="images/cloudera-logo.png">
-            </a>
-          </section> 
-          <section class="col-md-9 col-sm-8">
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
+            <p>Rating Tower – One resource to refer to for the best local reviews.</p>
           </section>
         </section><!--  Companies  -->
       </section>  

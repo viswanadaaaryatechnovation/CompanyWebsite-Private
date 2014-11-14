@@ -28,62 +28,27 @@
 
     <section class="row">
       <section class="col-md-12">
-        <h2>Companies</h2>
+        <h2>Investors</h2>
         <section class="titlebtm">
             <div></div>
           </section>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+        <p>For investors we provide great opportunity to invest in our diversified technology company
+with innovative products. At the same time we understand the value of potential partners 
+and investors so that our vision can be turned into reality and we can grow rapidly from 
+a startup into sustainable market leadership. We are more than a bunch of passionate 
+founders as not only we will give you access to our detailed presentations of your products
+but we will walk you through the detailed analytics and market traction our products have 
+achieved.</p>
+<p>We are looking for long term partners who can provide seasoned experience, resources,
+strategic advice, thoughtful guidance and unwavering support. We strongly believe that a
+good fostering partnership happens when both parties are genuinely committed towards a 
+common mission and purpose.</p>
+<p>We are looking for venture and growth stage funding to gain sustainable global market 
+leadership. Please contact us to know more about our projects and to gain access to our
+exclusive investors portal where you can see in depth analytics of specific projects.</p>
       </section>
     </section>
-   <section class="row">
-      <section class="col-md-12">
-        <h2> Our Partners </h2>
-        <section class="titlebtm">
-          <div></div>
-        </section>
-        <section class="row companies-wrap">
-          <section class="col-md-3 col-sm-4">
-            <a class="our-clients" href="#">
-              <img  src="images/airbnb-logo.png">
-            </a>
-          </section>
-
-          <section class="col-md-9 col-sm-8">
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
-          </section>
-        </section><!--  Companies  -->
-        <section class="row companies-wrap">
-          <section class="col-md-3 col-sm-4">
-            <a class="our-clients" href="#">
-              <img  src="images/cloudera-logo.png">
-            </a>
-          </section> 
-          <section class="col-md-9 col-sm-8">
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
-          </section>
-        </section><!--  Companies  -->
-        <section class="row companies-wrap">
-          <section class="col-md-3 col-sm-4">
-            <a class="our-clients" href="#">
-              <img  src="images/airbnb-logo.png">
-            </a>
-          </section> 
-          <section class="col-md-9 col-sm-8">
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
-          </section>
-        </section><!--  Companies  -->
-        <section class="row companies-wrap">
-          <section class="col-md-3 col-sm-4">
-            <a class="our-clients" href="#">
-              <img  src="images/cloudera-logo.png">
-            </a>
-          </section> 
-          <section class="col-md-9 col-sm-8">
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
-          </section>
-        </section><!--  Companies  -->
-      </section>  
-    </section>
+   
     </section>
 
   </section> 

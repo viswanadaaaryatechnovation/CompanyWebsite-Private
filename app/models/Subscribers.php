@@ -5,7 +5,7 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class Posts extends Eloquent implements UserInterface, RemindableInterface {
+class Subscribers extends Eloquent implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
 
@@ -14,15 +14,15 @@ class Posts extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var string
 	 */
-	protected $table = 'posts';
+	protected $table = 'subscribers';
 
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *
 	 * @var array
-	 */
+	*/
 	protected $guarded = array('id');
-	protected $fillable = array('title', 'image', 'description');
-	public static $rules = array('title' => 'required|min:3', 'description' => 'required|min:10');
+	protected $fillable = array('email','ip_address');
+	public static $rules = array('email' => 'required|email');
 
 }

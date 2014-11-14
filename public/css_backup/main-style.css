@@ -14,7 +14,7 @@ body {
 	background:#ffffff;
 	font-family: 'Open Sans', Arial; /*font-family: 'Sanchez',Arial, Helvetica, sans-serif;*/
 	color:#1a1a1a;
-	font-size:16px;
+	font-size:14px;
 	line-height: normal;
 	font-weight: 600;
 }
@@ -58,7 +58,6 @@ h1, h2, h4, h6 {
 	font-weight: 600;
 }
 p {
-	/*text-align:justify;*/
 	color:#444444;
 	line-height: 26px;/*	font-family:'Sanchez';*/
 }
@@ -208,12 +207,10 @@ a:hover {
 		-moz-transition:all 0.3s linear;
 		-o-transition:all 0.3s linear;
 		transition:all 0.3s linear;	
-		border-radius:3px;
-		margin:3px 2px;
 }
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-	background: #676767;
-	color: #FFF
+	background: #fff;
+	color: #2d2d2d
 }
 .navbar {
 	min-height:30px;
@@ -248,7 +245,7 @@ header .row {
 	border:none;
 }
 .connect {
-	margin-right:100px;
+	margin-top:15px;
 }
 .connect i {
 	margin-top:3px;
@@ -349,31 +346,20 @@ header .row {
 	z-index: 9999;
 }
 .more-links a {
-	background: #f2f2f2; /* Old browsers */
-background: -moz-linear-gradient(top,  #f2f2f2 0%, #d9d9d9 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#d9d9d9)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #f2f2f2 0%,#d9d9d9 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #f2f2f2 0%,#d9d9d9 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #f2f2f2 0%,#d9d9d9 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #f2f2f2 0%,#d9d9d9 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#d9d9d9',GradientType=0 ); /* IE6-9 */
-
-	
-	
+	background: #bd1117;
 	border-radius: 4px;
-	color: #333;
+	color: #fff;
 	display: inline-block;
 	font-size: 13px;
-	margin-left: 35px;
+	margin-left: 10px;
 	min-width: 150px;
 	padding: 14px 15px;
 	text-transform: uppercase;
 	font-family: sans-serif;
-	border-bottom:2px solid #bd1117;
 }
 .more-links a:hover {
 	text-decoration: none;
-	color: #bd1117
+	color: #fff
 }
 ul.get-social {
 	position: absolute;
@@ -521,8 +507,8 @@ a.view:after {
 .connect i {
 	float: left;
 	font-style: normal;
-	font-size: 13px;
-	color: #FFF;
+	font-size: 17px;
+	color: #000;
 	margin-right: 15px;
 	line-height: 26px;
 }
@@ -689,8 +675,8 @@ a.view:after {
 	text-align: center;
 }
 .companies-wrap p {
-	color: #70716F;
-	font-size: 16px;
+	color: #666666;
+	font-size: 14px;
 	line-height: 22px;
 	margin-top: 10px;
 }
@@ -708,20 +694,19 @@ a.view:after {
 	color: #bd1117
 }
 .right-head {
-	background: #747272;
+	background: #bd1117;
 	border-radius: 5px;
 	color: #fff;
 	font-size: 20px;
 	margin-bottom: 20px;
-	padding: 11px;
+	padding: 20px;
 	text-align: center;
 	position: relative;
-	margin-top:20px;
 }
 .right-head:before {
 	border-left: 12px solid transparent;
 	border-right: 12px solid transparent;
-	border-top: 8px solid #747272;
+	border-top: 8px solid #bd1117;
 	content: "";
 	position: absolute;
 	left:50%;
@@ -729,7 +714,7 @@ a.view:after {
 	bottom: -8px;
 }
 .comp-logo span {
-	margin-bottom: 25px;
+	margin-bottom: 10px;
 	display: block;
 }
 /*  Blog  InnerPage */
@@ -898,8 +883,7 @@ a.view:after {
 }
 #off-address p {
 	word-wrap: break-word;
-	color: #666;
-	text-align:left;
+	color: #666
 }
 #off-address p strong {
 	display: block;
@@ -1093,14 +1077,6 @@ ul.ex-links li a:hover {
 width: 750px;
 }
 }
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape){
-	
-	.more-links a {
-		margin-left:0;
-		}
-}
-
 @media (min-width: 992px) {
 .container {
 width: 950px;
@@ -1175,32 +1151,4 @@ float: none;
 display: block;
 margin-bottom: 10px;
 }
-}
-
-
-.col-md-9 ul li{
-	text-align:justify;
-	color:#444444;
-	line-height: 26px;
-	margin-top:10px;
-}
-
-div.subscribe {
-    float: right;
-    margin-top: -50px;
-}
-
-.email-subscribe {
-display:inline; 
-border: 1px solid #dcdcdc; 
-height: 37px;
-width: 300px;
-vertical-align: middle;
-}
-
-input.view {
-	font-size: 16px;
-	color: #5c5b5b;
-	width: 100px;
-	
 }
