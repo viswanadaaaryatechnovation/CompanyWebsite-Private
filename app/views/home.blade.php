@@ -41,7 +41,7 @@
 
             <div class="more-links">
             {{ HTML::link('pitch', 'Pitch AN idea', true)}}
-            {{ HTML::link('companies', 'More Companies', true)}}
+            {{ HTML::link('companies', 'More Businesses', true)}}
 <!--              <a href="javascript:;">  <i class="fa fa-angle-double-right"></i></a>
               <a href="javascript:;"> More Companies </i></a>-->
             </div>

@@ -10,7 +10,7 @@ class MetaFieldsController extends \BaseController {
 	public function index()
 	{
 		if (Session::has('user_id')){
-			$metafields = Metafields::join('pages', 'pages.id', '=', 'metafields.page_id')->paginate(4, array('pages.name as pname', 'metafields.id', 'metafields.name', 'metafields.content'));
+			$metafields = MetaFields::join('pages', 'pages.id', '=', 'metafields.page_id')->paginate(4, array('pages.name as pname', 'metafields.id', 'metafields.name', 'metafields.content'));
 			//print_r($metafields);exit;
         	return View::make('secureadmin.metafields.index', array('metafields'=>$metafields));
 		}else{
@@ -44,10 +44,10 @@ class MetaFieldsController extends \BaseController {
 	{
 		$input = Input::all();
 		$input['ip_address'] = Request::getClientIp();
-        	$validation = Validator::make($input, Metafields::$rules);
+        	$validation = Validator::make($input, MetaFields::$rules);
         	if ($validation->passes())
         	{
-            	Metafields::create($input);
+            	MetaFields::create($input);
             	return Redirect::route('secureadmin.metafields.index');
         	}
 
@@ -84,7 +84,7 @@ class MetaFieldsController extends \BaseController {
 			foreach($pageslist as $page){
 				$pages[$page['id']] = $page['name'];
 			}
-			$meta = Metafields::find($id);
+			$meta = MetaFields::find($id);
         	if (is_null($meta))
         	{
             	return Redirect::route('secureadmin.metafields.index');
@@ -104,10 +104,10 @@ class MetaFieldsController extends \BaseController {
 	{
         $input = Input::all();
 		$input['ip_address'] = Request::getClientIp();
-        $validation = Validator::make($input, Metafields::$rules);
+        $validation = Validator::make($input, MetaFields::$rules);
         if ($validation->passes())
         {
-            $user = Metafields::find($id);
+            $user = MetaFields::find($id);
             $user->update($input);
             return Redirect::route('secureadmin.metafields.index');
         }
@@ -128,7 +128,7 @@ return Redirect::route('secureadmin.metafields.edit', $id)
 	 */
 	public function destroy($id)
 	{
-			Metafields::find($id)->delete();
+			MetaFields::find($id)->delete();
         	return Redirect::route('secureadmin.metafields.index');
 		
 	}

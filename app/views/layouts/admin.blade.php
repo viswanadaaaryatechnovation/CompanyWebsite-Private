@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="icon" type="image/x-icon" href="{{asset('images/favicon.ico')}}" />
+        <link rel="icon" type="image/x-icon" href="{{asset('images/favicon2.ico')}}" />
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap
 /2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
 <link href="{{asset('css/admin-styles.css')}}" rel="stylesheet" type="text/css" />
